@@ -13,6 +13,14 @@ const UA = 'SiteControlCenter/2.0 (+https://rickyganiere.github.io/site-control-
 
 const text = (html, re) => (html.match(re)?.[1] || '').replace(/\s+/g, ' ').trim();
 const has = (html, re) => re.test(html);
+const safeUrl = (value) => {
+  try {
+    const u = new URL(value);
+    return u.origin + u.pathname;
+  } catch {
+    return '';
+  }
+};
 
 async function fetchWithTimeout(url, opts = {}) {
   const ctrl = new AbortController();
@@ -150,7 +158,7 @@ async function inspectSite(def) {
     ok: true,
     status,
     responseMs: home.ms,
-    finalUrl: home.res.url,
+    finalUrl: safeUrl(home.res.url),
     contentType: headers.get('content-type') || '',
   };
   result.headers = {
