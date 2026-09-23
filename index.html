@@ -53,7 +53,9 @@ function perfBlock(x){
  '<div class="mini"><span>Desktop</span><b class="'+tone(d.scores?.performance)+'">'+esc(d.scores?.performance??'—')+'</b></div>'+
  '<div class="mini"><span>Lab LCP</span><b>'+fmtMs(m.lab?.lcpMs)+'</b></div>'+
  '<div class="mini"><span>Lab CLS</span><b>'+esc(m.lab?.cls??'—')+'</b></div>'+
- '</div><div class="muted" style="margin-top:7px;font-size:10px">'+(f.available?'Field data: '+esc(f.lcp?.category||'available')+' LCP · '+esc(f.inp?.category||'n/a')+' INP':m.psiSkipped?'Lab data via Lighthouse · Field CWV optional with a free PageSpeed API key':m.psiError?'Field CWV unavailable ('+esc(m.psiError)+') · Lab data via Lighthouse':'Field CWV: not enough Chrome UX data')+'</div></div>';
+ '</div><div class="muted" style="margin-top:7px;font-size:10px">'+(f.available?'Field data: '+esc(f.lcp?.category||'available')+' LCP · '+esc(f.inp?.category||'n/a')+' INP':m.psiSkipped?'Lab data via Lighthouse · Field CWV optional with a free PageSpeed API key':m.psiError?'Field CWV unavailable ('+esc(m.psiError)+') · Lab data via Lighthouse':'Field CWV: not enough Chrome UX data')+'</div>'+
+ ((m.recommendations||[]).length?'<div class="muted" style="margin-top:7px;font-size:10px">Focus: '+(m.recommendations||[]).slice(0,3).map(r=>esc(r.title)+(r.displayValue?' ('+esc(r.displayValue)+')':'')).join(' · ')+'</div>':'')+
+ '</div>';
 }
 function linksBlock(x){
  const l=byId(links.sites,x.id); if(!l)return '';
