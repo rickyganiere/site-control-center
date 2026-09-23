@@ -18,7 +18,13 @@ A zero-database, zero-paid-dependency control center for website and application
 - Accessibility, Best Practices and SEO scores
 - Lab LCP, CLS, FCP, TBT, Speed Index and Time to Interactive
 - Chrome UX Report field Core Web Vitals when Google has enough real-user data
-- Optional `PAGESPEED_API_KEY` secret; low-frequency monitoring can run without one
+- Optional `PAGESPEED_API_KEY` secret; when Google rate-limits anonymous API calls, the workflow automatically falls back to local Lighthouse CLI
+
+### Broken-link scan — daily
+- Bounded internal-link crawl on public websites
+- Checks up to 30 same-origin links per site
+- Stores broken-link count and the affected URLs
+- Protected/private apps are intentionally skipped
 
 ### GitHub status — every 6 hours
 - Latest selected GitHub Actions workflow
