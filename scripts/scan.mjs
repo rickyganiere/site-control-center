@@ -1,3 +1,4 @@
+// Site Control Center health scanner
 import fs from 'node:fs/promises';
 import tls from 'node:tls';
 import path from 'node:path';
