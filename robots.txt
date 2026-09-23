@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rickyganiere.github.io/site-control-center/sitemap.xml
