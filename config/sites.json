@@ -5,10 +5,8 @@
     "url": "https://advault-ai.com",
     "monitorMode": "website",
     "performance": true,
-    "githubRepo": "rickyganiere/Advault",
-    "githubWorkflow": "Validate AdVault",
     "githubKind": "CI",
-    "repoPrivate": true
+    "githubStatus": "private"
   },
   {
     "id": "merchant-scanner",
@@ -16,10 +14,8 @@
     "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
     "monitorMode": "app",
     "performance": true,
-    "githubRepo": "rickyganiere/Nextgen-Crawler",
-    "githubWorkflow": "Deploy Merchant Radar",
     "githubKind": "Deploy",
-    "repoPrivate": true
+    "githubStatus": "private"
   },
   {
     "id": "affiliate-discovery",
@@ -38,8 +34,7 @@
     "expectedStatuses": [200, 401, 403],
     "githubRepo": "rickyganiere/dcb-expansion-radar",
     "githubWorkflow": "Validate Radar",
-    "githubKind": "CI",
-    "repoPrivate": false
+    "githubKind": "CI"
   },
   {
     "id": "site-control-center",
@@ -51,7 +46,6 @@
     "sitemapPath": "sitemap.xml",
     "githubRepo": "rickyganiere/site-control-center",
     "githubWorkflow": "Deploy dashboard",
-    "githubKind": "Deploy",
-    "repoPrivate": false
+    "githubKind": "Deploy"
   }
 ]
