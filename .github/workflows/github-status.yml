@@ -25,7 +25,6 @@ jobs:
     timeout-minutes: 5
     env:
       GITHUB_PUBLIC_TOKEN: ${{ github.token }}
-      GITHUB_MONITOR_TOKEN: ${{ secrets.GITHUB_MONITOR_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,9 +38,16 @@ jobs:
             echo "No changes"
             exit 0
           fi
+          cp data/deployments.json /tmp/deployments.json
           git config user.name "site-control-bot"
           git config user.email "site-control-bot@users.noreply.github.com"
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/deployments.json data/deployments.json
+          if git diff --quiet -- data/deployments.json; then
+            echo "No changes after refresh"
+            exit 0
+          fi
           git add data/deployments.json
           git commit -m "chore: update GitHub status snapshot"
-          git pull --rebase origin main
-          git push
+          git push origin HEAD:main
