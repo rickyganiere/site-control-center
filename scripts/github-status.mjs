@@ -49,27 +49,23 @@ try {
 const previousById = new Map((previous.sites || []).map(x => [x.id, x]));
 const results = [];
 
-for (const def of sites.filter(s => s.githubRepo)) {
+for (const def of sites.filter(s => s.githubRepo || s.githubStatus === 'private')) {
   const old = previousById.get(def.id);
 
-  if (def.repoPrivate && !process.env.GITHUB_MONITOR_TOKEN) {
+  if (def.githubStatus === 'private') {
     results.push({
       id: def.id,
-      repo: def.githubRepo,
-      workflow: def.githubWorkflow || null,
       kind: def.githubKind || 'CI',
       available: false,
       private: true,
-      note: 'Live app monitoring is active. Private GitHub workflow status needs the optional GITHUB_MONITOR_TOKEN secret.',
-      latest: old?.latest || null,
-      stale: !!old?.latest,
+      note: 'Live app monitoring is active. Private repository metadata is intentionally not published.',
+      latest: null,
+      stale: false,
     });
     continue;
   }
 
-  const token = def.repoPrivate
-    ? (process.env.GITHUB_MONITOR_TOKEN || '')
-    : (def.githubRepo === SELF_REPO ? (process.env.GITHUB_PUBLIC_TOKEN || '') : '');
+  const token = def.githubRepo === SELF_REPO ? (process.env.GITHUB_PUBLIC_TOKEN || '') : '';
 
   try {
     const payload = await fetchRuns(def.githubRepo, token);
@@ -80,7 +76,7 @@ for (const def of sites.filter(s => s.githubRepo)) {
       workflow: def.githubWorkflow || run?.name || null,
       kind: def.githubKind || 'CI',
       available: !!run,
-      private: !!def.repoPrivate,
+      private: false,
       stale: false,
       latest: run ? {
         id: run.id,
@@ -103,7 +99,7 @@ for (const def of sites.filter(s => s.githubRepo)) {
       workflow: def.githubWorkflow || old?.workflow || null,
       kind: def.githubKind || 'CI',
       available: !!old?.latest,
-      private: !!def.repoPrivate,
+      private: false,
       stale: !!old?.latest,
       latest: old?.latest || null,
       error: error?.message || String(error),
