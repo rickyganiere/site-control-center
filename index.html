@@ -60,9 +60,16 @@ function linksBlock(x){
 }
 function deployBlock(x){
  const g=byId(deployments.sites,x.id); if(!g)return '';
- if(!g.available)return '<div class="strip"><div class="stripTop"><div class="stripTitle">'+esc(g.kind||'CI')+'</div><div class="muted">Private</div></div><div class="muted" style="margin-top:6px">Live app monitoring active; private GitHub workflow status is optional.</div></div>';
- const r=g.latest||{}; const label=r.status==='completed'?(r.conclusion||'completed'):r.status; const cls=label==='success'?'goodText':label==='failure'?'badText':'warnText';
- return '<div class="strip"><div class="stripTop"><div class="stripTitle">'+esc(g.kind||'CI')+' · '+esc(g.workflow||r.name||'GitHub')+'</div><b class="'+cls+'">'+esc(label||'—')+'</b></div><div class="muted" style="margin-top:6px">'+esc(r.title||'')+' · '+esc(ago(r.updatedAt||r.createdAt))+'</div></div>';
+ const r=g.latest||null;
+ if(!r){
+   const state=g.private?'Private repo':'Status unavailable';
+   const note=g.private?'Live app monitoring is active; private GitHub workflow status is optional.':(g.error||'GitHub status is temporarily unavailable.');
+   return '<div class="strip"><div class="stripTop"><div class="stripTitle">'+esc(g.kind||'CI')+'</div><div class="muted">'+esc(state)+'</div></div><div class="muted" style="margin-top:6px">'+esc(note)+'</div></div>';
+ }
+ const label=r.status==='completed'?(r.conclusion||'completed'):r.status;
+ const cls=label==='success'?'goodText':label==='failure'?'badText':'warnText';
+ const stale=g.stale?' · cached':'';
+ return '<div class="strip"><div class="stripTop"><div class="stripTitle">'+esc(g.kind||'CI')+' · '+esc(g.workflow||r.name||'GitHub')+'</div><b class="'+cls+'">'+esc(label||'—')+'</b></div><div class="muted" style="margin-top:6px">'+esc(r.title||'')+' · '+esc(ago(r.updatedAt||r.createdAt))+esc(stale)+'</div></div>';
 }
 function facts(x){
  const mode=x.monitorMode||'website'; const ssl=x.ssl?.ok?x.ssl.daysRemaining+' days':'—';
@@ -94,8 +101,9 @@ search.addEventListener('input',render);
 Promise.all([
  fetch('./data/status.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()),
  fetch('./data/performance.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).catch(()=>({sites:[],summary:{}})),
- fetch('./data/deployments.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).catch(()=>({sites:[],summary:{}}))
-]).then(([h,p,d])=>{health=h;performance=p;deployments=d;render()}).catch(()=>{sites.innerHTML='<div class="empty">Could not load monitoring data.</div>'});
+ fetch('./data/deployments.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).catch(()=>({sites:[],summary:{}})),
+ fetch('./data/links.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).catch(()=>({sites:[],summary:{}}))
+]).then(([h,p,d,l])=>{health=h;performance=p;deployments=d;links=l;render()}).catch(()=>{sites.innerHTML='<div class="empty">Could not load monitoring data.</div>'});
 </script>
 </body>
 </html>
