@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-23T01:47:02.696Z",
+  "generatedAt": "2026-09-23T01:49:20.099Z",
   "summary": {
     "tracked": 4,
     "visible": 2,
-    "successful": 2,
+    "successful": 1,
     "failing": 0,
-    "running": 0,
+    "running": 1,
     "stale": 0
   },
   "sites": [
@@ -58,17 +58,17 @@
       "private": false,
       "stale": false,
       "latest": {
-        "id": 35807649979,
+        "id": 35807858777,
         "name": "Deploy dashboard",
-        "status": "completed",
-        "conclusion": "success",
+        "status": "in_progress",
+        "conclusion": null,
         "event": "push",
         "branch": "main",
-        "sha": "8faf3221601e0491e05d208b602924618c6063a4",
-        "title": "ci: retry snapshot writes on branch races",
-        "createdAt": "2026-09-23T01:46:10Z",
-        "updatedAt": "2026-09-23T01:46:44Z",
-        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807649979"
+        "sha": "a6de91158eecd080db16ff6e24d3e7cb93dea396",
+        "title": "feat: monitor expected project branding",
+        "createdAt": "2026-09-23T01:49:12Z",
+        "updatedAt": "2026-09-23T01:49:16Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807858777"
       }
     }
   ],
@@ -114,6 +114,12 @@
       "successful": 2,
       "failing": 0,
       "running": 0
+    },
+    {
+      "at": "2026-09-23T01:49:20.099Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
     }
   ]
 }
