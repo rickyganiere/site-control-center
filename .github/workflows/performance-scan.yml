@@ -31,4 +31,5 @@ jobs:
       - name: Publish snapshot
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/publish-snapshot.mjs data/performance.json "chore: update performance snapshot"
+        run: |
+          node scripts/publish-snapshot.mjs data/performance.json "chore: update performance snapshot"
