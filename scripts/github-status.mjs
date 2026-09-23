@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises';
+// Site Control Center GitHub status monitor v1.1\nimport fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
