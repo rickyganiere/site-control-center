@@ -1,11 +1,36 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-09-23T01:38:05.244Z",
   "summary": {
-    "monitoredSites": 0,
-    "checkedLinks": 0,
+    "monitoredSites": 2,
+    "checkedLinks": 6,
     "brokenLinks": 0,
     "sitesWithBrokenLinks": 0
   },
-  "sites": [],
-  "history": []
+  "sites": [
+    {
+      "id": "advault-ai",
+      "name": "AdVault AI",
+      "url": "https://advault-ai.com",
+      "checkedAt": "2026-09-23T01:38:05.201Z",
+      "checkedCount": 6,
+      "brokenCount": 0,
+      "broken": []
+    },
+    {
+      "id": "site-control-center",
+      "name": "Site Control Center",
+      "url": "https://rickyganiere.github.io/site-control-center/",
+      "checkedAt": "2026-09-23T01:38:05.244Z",
+      "checkedCount": 0,
+      "brokenCount": 0,
+      "broken": []
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-09-23T01:38:05.244Z",
+      "brokenLinks": 0,
+      "checkedLinks": 6
+    }
+  ]
 }
