@@ -1,11 +1,178 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-09-23T01:38:18.623Z",
   "summary": {
-    "monitoredSites": 0,
-    "mobileAvg": null,
-    "desktopAvg": null,
-    "errors": 0
+    "monitoredSites": 3,
+    "mobileAvg": 90,
+    "desktopAvg": 91,
+    "errors": 0,
+    "fallbacks": 6
   },
-  "sites": [],
-  "history": []
+  "sites": [
+    {
+      "id": "advault-ai",
+      "name": "AdVault AI",
+      "url": "https://advault-ai.com",
+      "mobile": {
+        "strategy": "mobile",
+        "source": "lighthouse-cli",
+        "fetchedAt": "2026-09-23T01:35:50.652Z",
+        "finalUrl": "https://advault-ai.com/",
+        "scores": {
+          "performance": 72,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "fcpMs": 2108,
+          "lcpMs": 3336,
+          "tbtMs": 222,
+          "cls": 0.282,
+          "speedIndexMs": 2108,
+          "interactiveMs": 4314
+        },
+        "field": {
+          "available": false
+        },
+        "psiError": "HTTP 429"
+      },
+      "desktop": {
+        "strategy": "desktop",
+        "source": "lighthouse-cli",
+        "fetchedAt": "2026-09-23T01:36:03.518Z",
+        "finalUrl": "https://advault-ai.com/",
+        "scores": {
+          "performance": 82,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "fcpMs": 778,
+          "lcpMs": 818,
+          "tbtMs": 0,
+          "cls": 0.354,
+          "speedIndexMs": 778,
+          "interactiveMs": 818
+        },
+        "field": {
+          "available": false
+        },
+        "psiError": "HTTP 429"
+      }
+    },
+    {
+      "id": "merchant-scanner",
+      "name": "Merchant Scanner",
+      "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
+      "mobile": {
+        "strategy": "mobile",
+        "source": "lighthouse-cli",
+        "fetchedAt": "2026-09-23T01:36:59.006Z",
+        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
+        "scores": {
+          "performance": 100,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "seo": 82
+        },
+        "lab": {
+          "fcpMs": 1040,
+          "lcpMs": 1149,
+          "tbtMs": 0,
+          "cls": 0,
+          "speedIndexMs": 1040,
+          "interactiveMs": 1149
+        },
+        "field": {
+          "available": false
+        },
+        "psiError": "HTTP 429"
+      },
+      "desktop": {
+        "strategy": "desktop",
+        "source": "lighthouse-cli",
+        "fetchedAt": "2026-09-23T01:37:54.623Z",
+        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
+        "scores": {
+          "performance": 100,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "seo": 82
+        },
+        "lab": {
+          "fcpMs": 269,
+          "lcpMs": 403,
+          "tbtMs": 0,
+          "cls": 0.003,
+          "speedIndexMs": 397,
+          "interactiveMs": 403
+        },
+        "field": {
+          "available": false
+        },
+        "psiError": "HTTP 429"
+      }
+    },
+    {
+      "id": "site-control-center",
+      "name": "Site Control Center",
+      "url": "https://rickyganiere.github.io/site-control-center/",
+      "mobile": {
+        "strategy": "mobile",
+        "source": "lighthouse-cli",
+        "fetchedAt": "2026-09-23T01:38:06.723Z",
+        "finalUrl": "https://rickyganiere.github.io/site-control-center/",
+        "scores": {
+          "performance": 98,
+          "accessibility": 100,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "lab": {
+          "fcpMs": 877,
+          "lcpMs": 877,
+          "tbtMs": 0,
+          "cls": 0.098,
+          "speedIndexMs": 877,
+          "interactiveMs": 877
+        },
+        "field": {
+          "available": false
+        },
+        "psiError": "HTTP 429"
+      },
+      "desktop": {
+        "strategy": "desktop",
+        "source": "lighthouse-cli",
+        "fetchedAt": "2026-09-23T01:38:18.622Z",
+        "finalUrl": "https://rickyganiere.github.io/site-control-center/",
+        "scores": {
+          "performance": 90,
+          "accessibility": 100,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "lab": {
+          "fcpMs": 288,
+          "lcpMs": 288,
+          "tbtMs": 0,
+          "cls": 0.208,
+          "speedIndexMs": 288,
+          "interactiveMs": 288
+        },
+        "field": {
+          "available": false
+        },
+        "psiError": "HTTP 429"
+      }
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-09-23T01:38:18.623Z",
+      "mobileAvg": 90,
+      "desktopAvg": 91
+    }
+  ]
 }
