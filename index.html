@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#081018">
+<title>Site Control Center</title>
+<style>
+:root{color-scheme:dark;--bg:#071017;--panel:#0d1720;--line:#20303d;--text:#ecf4f7;--muted:#8fa4b2;--good:#5ee0a0;--warn:#ffd166;--bad:#ff6b78;--cyan:#69d6ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0%,#102838 0,transparent 30%),var(--bg);color:var(--text);font:14px/1.45 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}.shell{max-width:1420px;margin:auto;padding:26px}.top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}.brand{display:flex;gap:13px;align-items:center}.mark{width:44px;height:44px;border-radius:14px;border:1px solid #2b4c5c;display:grid;place-items:center;font-weight:800;color:var(--cyan);background:#0d1b24}.sub,.muted{color:var(--muted)}h1{font-size:22px;margin:0}.sub{font-size:12px;margin-top:3px}.live{font-size:12px;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.metric,.site,.history{background:linear-gradient(180deg,#111e29,#0b141c);border:1px solid var(--line);border-radius:16px}.metric{padding:17px}.k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em}.v{font-size:29px;font-weight:750;margin-top:6px}.toolbar{display:flex;gap:10px;margin:18px 0}.search,.btn{border:1px solid var(--line);border-radius:12px;background:#0a141c;color:var(--text);padding:10px 12px}.search{flex:1;max-width:380px}.btn{cursor:pointer}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.site{overflow:hidden}.siteHead{display:flex;justify-content:space-between;gap:14px;padding:17px;border-bottom:1px solid var(--line)}.siteName{display:flex;gap:10px;min-width:0}.dot{width:9px;height:9px;border-radius:50%;margin-top:5px;flex:none}.healthy{background:var(--good)}.warning{background:var(--warn)}.critical{background:var(--bad)}.name{font-weight:700}.url{color:var(--muted);font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:480px}.score{font-size:22px;font-weight:800}.body{padding:16px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.fact{border:1px solid #1b2a35;background:#081219;border-radius:11px;padding:9px}.fact span{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.06em}.fact b{display:block;margin-top:4px;font-size:12px}.issues{display:flex;flex-direction:column;gap:7px;margin-top:12px}.issue{padding:9px 10px;border:1px solid #17252f;border-radius:10px;background:#09131a;font-size:12px}.ok{color:var(--good);padding:8px 0}.section{display:flex;justify-content:space-between;margin:26px 0 10px}.history{height:105px;padding:12px;display:flex;align-items:flex-end;gap:4px}.bar{flex:1;min-width:3px;border-radius:4px 4px 1px 1px;background:linear-gradient(180deg,#69d6ff,#315a70)}.empty{grid-column:1/-1;border:1px dashed #2a3b47;border-radius:16px;padding:45px;text-align:center;color:var(--muted)}.footer{text-align:center;color:var(--muted);font-size:11px;margin:26px 0 8px}
+@media(max-width:1000px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}}
+@media(max-width:700px){.shell{padding:17px 13px}.live{display:none}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.facts{grid-template-columns:repeat(2,1fr)}.toolbar{align-items:stretch}.search{max-width:none}.url{max-width:230px}}
+@media(min-width:768px) and (max-width:1024px) and (orientation:portrait){.shell{padding:22px}.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.facts{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<main class="shell">
+<div class="top"><div class="brand"><div class="mark">SC</div><div><h1>Site Control Center</h1><div class="sub">Free website health & technical SEO monitor</div></div></div><div class="live" id="scanTime">Loading latest scan…</div></div>
+<section class="metrics">
+<div class="metric"><div class="k">Sites</div><div class="v" id="mSites">—</div></div>
+<div class="metric"><div class="k">Online</div><div class="v" id="mOnline">—</div></div>
+<div class="metric"><div class="k">Healthy</div><div class="v" id="mHealthy">—</div></div>
+<div class="metric"><div class="k">Critical</div><div class="v" id="mCritical">—</div></div>
+<div class="metric"><div class="k">Avg SEO</div><div class="v" id="mScore">—</div></div>
+</section>
+<div class="toolbar"><input class="search" id="search" placeholder="Search site or URL…"><button class="btn" onclick="location.reload()">Refresh</button></div>
+<section class="grid" id="sites"><div class="empty">Loading monitored sites…</div></section>
+<div class="section"><b>Health history</b><span class="muted">Last 60 scans</span></div>
+<div class="history" id="history"></div>
+<div class="footer">Site Control Center · GitHub Pages · no database · no paid monitoring dependency</div>
+</main>
+<script>
+let payload={sites:[],summary:{},history:[]};
+const esc=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const ago=iso=>{if(!iso)return'No scan yet';const d=(Date.now()-new Date(iso))/1000;if(d<90)return'Moments ago';if(d<3600)return Math.floor(d/60)+' min ago';if(d<86400)return Math.floor(d/3600)+' h ago';return Math.floor(d/86400)+' d ago'};
+function card(x){const issues=(x.issues||[]).slice(0,4);const status=x.http?.status||'DOWN';const ssl=x.ssl?.ok?x.ssl.daysRemaining+' days':'—';return '<article class="site"><div class="siteHead"><div class="siteName"><span class="dot '+esc(x.health||'critical')+'"></span><div style="min-width:0"><div class="name">'+esc(x.name)+'</div><div class="url">'+esc(x.url)+'</div></div></div><div class="score">'+(x.score||0)+'/100</div></div><div class="body"><div class="facts"><div class="fact"><span>HTTP</span><b>'+esc(status)+'</b></div><div class="fact"><span>Response</span><b>'+esc(x.http?.responseMs?x.http.responseMs+' ms':'—')+'</b></div><div class="fact"><span>SSL</span><b>'+esc(ssl)+'</b></div><div class="fact"><span>H1</span><b>'+esc(x.seo?.h1Count??'—')+'</b></div><div class="fact"><span>robots</span><b>'+(x.robots?.ok?'OK':'Missing')+'</b></div><div class="fact"><span>Sitemap</span><b>'+(x.sitemap?.ok?'OK':'Missing')+'</b></div><div class="fact"><span>Canonical</span><b>'+(x.seo?.canonical?'OK':'Missing')+'</b></div><div class="fact"><span>HSTS</span><b>'+(x.headers?.hsts?'ON':'OFF')+'</b></div></div><div class="issues">'+(issues.length?issues.map(i=>'<div class="issue">'+esc(i.check||i.severity)+' · '+esc(i.message)+'</div>').join(''):'<div class="ok">✓ No baseline SEO issues detected.</div>')+'</div></div></article>'}
+function render(){const s=payload.summary||{};mSites.textContent=s.totalSites??0;mOnline.textContent=s.online??0;mHealthy.textContent=s.healthy??0;mCritical.textContent=s.critical??0;mScore.textContent=(s.avgScore??0)+'/100';scanTime.textContent='Last scan '+ago(payload.generatedAt);const q=search.value.toLowerCase().trim();const rows=(payload.sites||[]).filter(x=>!q||((x.name+' '+x.url).toLowerCase().includes(q)));sites.innerHTML=rows.length?rows.map(card).join(''):'<div class="empty">No sites match this search.</div>';const h=(payload.history||[]).slice(-60);history.innerHTML=h.length?h.map(p=>'<div class="bar" title="'+esc(p.at)+' · '+p.avgScore+'/100" style="height:'+Math.max(8,p.avgScore||0)+'%"></div>').join(''):'<span class="muted">History appears after the first scans.</span>'}
+search.addEventListener('input',render);
+fetch('./data/status.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{payload=j;render()}).catch(()=>{sites.innerHTML='<div class="empty">Could not load scan data.</div>'});
+</script>
+</body>
+</html>
