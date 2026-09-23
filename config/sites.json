@@ -2,26 +2,56 @@
   {
     "id": "advault-ai",
     "name": "AdVault AI",
-    "url": "https://advault-ai.com"
+    "url": "https://advault-ai.com",
+    "monitorMode": "website",
+    "performance": true,
+    "githubRepo": "rickyganiere/Advault",
+    "githubWorkflow": "Validate AdVault",
+    "githubKind": "CI",
+    "repoPrivate": true
   },
   {
     "id": "merchant-scanner",
     "name": "Merchant Scanner",
-    "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev"
+    "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
+    "monitorMode": "app",
+    "performance": true,
+    "githubRepo": "rickyganiere/Nextgen-Crawler",
+    "githubWorkflow": "Deploy Merchant Radar",
+    "githubKind": "Deploy",
+    "repoPrivate": true
   },
   {
     "id": "affiliate-discovery",
     "name": "Affiliate Discovery",
-    "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site"
+    "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
+    "monitorMode": "protected",
+    "performance": false,
+    "expectedStatuses": [200, 401, 403]
   },
   {
     "id": "dcb-expansion-radar",
     "name": "DCB Expansion Radar",
-    "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev"
+    "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
+    "monitorMode": "protected",
+    "performance": false,
+    "expectedStatuses": [200, 401, 403],
+    "githubRepo": "rickyganiere/dcb-expansion-radar",
+    "githubWorkflow": "Validate Radar",
+    "githubKind": "CI",
+    "repoPrivate": false
   },
   {
     "id": "site-control-center",
     "name": "Site Control Center",
-    "url": "https://rickyganiere.github.io/site-control-center/"
+    "url": "https://rickyganiere.github.io/site-control-center/",
+    "monitorMode": "website",
+    "performance": true,
+    "robotsPath": "robots.txt",
+    "sitemapPath": "sitemap.xml",
+    "githubRepo": "rickyganiere/site-control-center",
+    "githubWorkflow": "Deploy dashboard",
+    "githubKind": "Deploy",
+    "repoPrivate": false
   }
 ]
