@@ -1,23 +1,64 @@
 # Site Control Center
 
-Free, zero-database website health and technical SEO dashboard.
+A zero-database, zero-paid-dependency control center for website and application monitoring.
 
-## V1 checks
-- HTTP status and response time
+## What it monitors
+
+### Fast health scan — every 6 hours
+- HTTP availability and response time
 - HTTPS and TLS certificate expiry
-- Title, meta description, H1, canonical
-- robots.txt and sitemap.xml
-- viewport, HTML lang and Open Graph
-- HSTS and CSP signals
-- homepage noindex
-- health score and issue severity
-- scan history
+- Website SEO fundamentals: title, meta description, H1, canonical, robots.txt, sitemap
+- Security signals: HSTS and CSP
+- Dedicated scoring modes for public websites, web apps and protected/private apps
+- 60-scan health history
 
-## Monitoring
-GitHub Actions scans the configured sites every 6 hours and saves the latest snapshot.
+### Performance scan — daily
+- Google PageSpeed Insights
+- Mobile and desktop Lighthouse performance
+- Accessibility, Best Practices and SEO scores
+- Lab LCP, CLS, FCP, TBT, Speed Index and Time to Interactive
+- Chrome UX Report field Core Web Vitals when Google has enough real-user data
+- Optional `PAGESPEED_API_KEY` secret; low-frequency monitoring can run without one
+
+### GitHub status — every 6 hours
+- Latest selected GitHub Actions workflow
+- Success / failure / running state
+- Public repositories work without an extra token
+- Private repositories can optionally use a `GITHUB_MONITOR_TOKEN` secret
+
+## Monitoring modes
+
+Each entry in `config/sites.json` can use:
+
+- `website` — full availability + technical SEO scoring
+- `app` — availability, TLS, responsive metadata and security headers
+- `protected` — availability, expected auth status, TLS and security headers; SEO login-page checks are intentionally skipped
+
+This prevents private applications and Cloudflare Access pages from being incorrectly flagged as SEO failures.
+
+## Architecture
+
+```text
+config/sites.json
+      |
+      +--> site-scan.yml --------> data/status.json
+      +--> performance-scan.yml -> data/performance.json
+      +--> github-status.yml ----> data/deployments.json
+                                      |
+                                      v
+                                GitHub Pages dashboard
+```
+
+No database, VPS, Datadog or paid monitoring SaaS is required.
+
+## Cost guardrails
+
+- Static dashboard on GitHub Pages
+- Scheduled scans on GitHub Actions
+- Performance scan only once per day
+- No persistent database
+- No paid API required for baseline operation
 
 ## Add a site
-Edit `config/sites.json`.
 
-## Cost
-No paid monitoring service, database, or SaaS dependency is required. The dashboard can run on GitHub Pages.
+Edit `config/sites.json`, classify its `monitorMode`, and enable `performance` only where a Lighthouse/PageSpeed test is useful.
