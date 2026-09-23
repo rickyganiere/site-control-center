@@ -3,5 +3,25 @@
     "id": "advault-ai",
     "name": "AdVault AI",
     "url": "https://advault-ai.com"
+  },
+  {
+    "id": "merchant-scanner",
+    "name": "Merchant Scanner",
+    "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev"
+  },
+  {
+    "id": "affiliate-discovery",
+    "name": "Affiliate Discovery",
+    "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site"
+  },
+  {
+    "id": "dcb-expansion-radar",
+    "name": "DCB Expansion Radar",
+    "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev"
+  },
+  {
+    "id": "site-control-center",
+    "name": "Site Control Center",
+    "url": "https://rickyganiere.github.io/site-control-center/"
   }
 ]
