@@ -5,6 +5,7 @@
     "url": "https://advault-ai.com",
     "monitorMode": "website",
     "performance": true,
+    "expectedTitleContains": "AdVault",
     "githubKind": "CI",
     "githubStatus": "private"
   },
@@ -14,6 +15,7 @@
     "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
     "monitorMode": "app",
     "performance": true,
+    "expectedTitleContains": "Merchant Scanner",
     "githubKind": "Deploy",
     "githubStatus": "private"
   },
@@ -42,6 +44,7 @@
     "url": "https://rickyganiere.github.io/site-control-center/",
     "monitorMode": "website",
     "performance": true,
+    "expectedTitleContains": "Site Control Center",
     "robotsPath": "robots.txt",
     "sitemapPath": "sitemap.xml",
     "githubRepo": "rickyganiere/site-control-center",
