@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-09-23T01:41:54.904Z",
+  "generatedAt": "2026-09-23T01:42:28.041Z",
   "summary": {
     "tracked": 4,
-    "visible": 0,
-    "successful": 0,
+    "visible": 2,
+    "successful": 1,
     "failing": 0,
-    "running": 0
+    "running": 1,
+    "stale": 0
   },
   "sites": [
     {
@@ -15,7 +16,9 @@
       "kind": "CI",
       "available": false,
       "private": true,
-      "note": "Private repository status requires optional GITHUB_MONITOR_TOKEN secret."
+      "note": "Live app monitoring is active. Private GitHub workflow status needs the optional GITHUB_MONITOR_TOKEN secret.",
+      "latest": null,
+      "stale": false
     },
     {
       "id": "merchant-scanner",
@@ -24,25 +27,53 @@
       "kind": "Deploy",
       "available": false,
       "private": true,
-      "note": "Private repository status requires optional GITHUB_MONITOR_TOKEN secret."
+      "note": "Live app monitoring is active. Private GitHub workflow status needs the optional GITHUB_MONITOR_TOKEN secret.",
+      "latest": null,
+      "stale": false
     },
     {
       "id": "dcb-expansion-radar",
       "repo": "rickyganiere/dcb-expansion-radar",
       "workflow": "Validate Radar",
       "kind": "CI",
-      "available": false,
+      "available": true,
       "private": false,
-      "error": "GitHub API HTTP 403"
+      "stale": false,
+      "latest": {
+        "id": 35685920252,
+        "name": "Validate Radar",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "pull_request",
+        "branch": "feature/radar-next",
+        "sha": "98e79e6544f933870225075d6cc6b5419502cbb6",
+        "title": "Radar Next: D1 Discovery, Automation Health and Source Manager",
+        "createdAt": "2026-09-22T04:11:11Z",
+        "updatedAt": "2026-09-22T04:11:28Z",
+        "url": "https://github.com/rickyganiere/dcb-expansion-radar/actions/runs/35685920252"
+      }
     },
     {
       "id": "site-control-center",
       "repo": "rickyganiere/site-control-center",
       "workflow": "Deploy dashboard",
       "kind": "Deploy",
-      "available": false,
+      "available": true,
       "private": false,
-      "error": "GitHub API HTTP 403"
+      "stale": false,
+      "latest": {
+        "id": 35807391065,
+        "name": "Deploy dashboard",
+        "status": "in_progress",
+        "conclusion": null,
+        "event": "push",
+        "branch": "main",
+        "sha": "43c7907a3b9d68eb90f5bd9773f0ad2fced0461a",
+        "title": "fix: preserve GitHub status and avoid cross-repo token 403",
+        "createdAt": "2026-09-23T01:42:21Z",
+        "updatedAt": "2026-09-23T01:42:26Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807391065"
+      }
     }
   ],
   "history": [
@@ -69,6 +100,12 @@
       "successful": 0,
       "failing": 0,
       "running": 0
+    },
+    {
+      "at": "2026-09-23T01:42:28.041Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
     }
   ]
 }
