@@ -15,8 +15,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: site-health-scan
-  cancel-in-progress: true
+  group: site-control-writes
+  cancel-in-progress: false
 
 jobs:
   scan:
