@@ -212,6 +212,20 @@ async function inspectSite(def) {
   result.score = scored.score;
   result.issues = scored.issues;
 
+  if (def.expectedTitleContains) {
+    const expected = String(def.expectedTitleContains).trim();
+    const actual = String(result.seo?.title || '').trim();
+    const ok = actual.toLowerCase().includes(expected.toLowerCase());
+    result.brand = { expectedTitleContains: expected, ok };
+    if (!ok) {
+      result.issues.unshift({
+        check: 'Brand title',
+        severity: 'medium',
+        message: `Page title does not contain expected brand "${expected}". Current title: "${actual || 'missing'}".`
+      });
+    }
+  }
+
   if (result.monitorMode === 'website' && result.seo.noindex) {
     result.issues.unshift({ check: 'Indexability', severity: 'high', message: 'Homepage appears to be marked noindex.' });
   }
@@ -220,7 +234,8 @@ async function inspectSite(def) {
   }
 
   const hasCritical = result.issues.some((issue) => issue.severity === 'critical');
-  result.health = !result.availability.ok || hasCritical || result.score < 60 ? 'critical' : result.score < 85 ? 'warning' : 'healthy';
+  const brandMismatch = result.brand?.ok === false;
+  result.health = !result.availability.ok || hasCritical || result.score < 60 ? 'critical' : (brandMismatch || result.score < 85) ? 'warning' : 'healthy';
   return result;
 }
 
