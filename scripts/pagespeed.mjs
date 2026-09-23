@@ -44,6 +44,36 @@ function fieldData(json) {
   };
 }
 
+function performanceRecommendations(audits = {}) {
+  const ids = [
+    'render-blocking-resources',
+    'unused-javascript',
+    'unused-css-rules',
+    'uses-text-compression',
+    'modern-image-formats',
+    'uses-optimized-images',
+    'uses-responsive-images',
+    'offscreen-images',
+    'unminified-javascript',
+    'unminified-css',
+    'server-response-time',
+    'dom-size'
+  ];
+  return ids
+    .map(id => ({ id, audit: audits[id] }))
+    .filter(x => x.audit && x.audit.score !== null && x.audit.score < 1)
+    .map(x => ({
+      id: x.id,
+      title: x.audit.title || x.id,
+      displayValue: x.audit.displayValue || null,
+      score: Number.isFinite(x.audit.score) ? Math.round(x.audit.score * 100) : null,
+      savingsMs: Number.isFinite(x.audit.details?.overallSavingsMs) ? Math.round(x.audit.details.overallSavingsMs) : null,
+      savingsBytes: Number.isFinite(x.audit.details?.overallSavingsBytes) ? Math.round(x.audit.details.overallSavingsBytes) : null
+    }))
+    .sort((a,b) => (b.savingsMs || 0) - (a.savingsMs || 0))
+    .slice(0, 4);
+}
+
 function parseLighthouse(lr, strategy, source, field = { available: false }, extra = {}) {
   const c = lr.categories || {};
   const a = lr.audits || {};
@@ -67,6 +97,7 @@ function parseLighthouse(lr, strategy, source, field = { available: false }, ext
       interactiveMs: auditNum(a.interactive),
     },
     field,
+    recommendations: performanceRecommendations(a),
     ...extra,
   };
 }
