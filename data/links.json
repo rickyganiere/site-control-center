@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T01:46:13.538Z",
+  "generatedAt": "2026-09-23T01:50:49.060Z",
   "summary": {
     "monitoredSites": 2,
     "checkedLinks": 6,
@@ -11,7 +11,7 @@
       "id": "advault-ai",
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
-      "checkedAt": "2026-09-23T01:46:13.459Z",
+      "checkedAt": "2026-09-23T01:50:48.999Z",
       "checkedCount": 6,
       "brokenCount": 0,
       "broken": []
@@ -20,7 +20,7 @@
       "id": "site-control-center",
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
-      "checkedAt": "2026-09-23T01:46:13.538Z",
+      "checkedAt": "2026-09-23T01:50:49.060Z",
       "checkedCount": 0,
       "brokenCount": 0,
       "broken": []
@@ -34,6 +34,11 @@
     },
     {
       "at": "2026-09-23T01:46:13.538Z",
+      "brokenLinks": 0,
+      "checkedLinks": 6
+    },
+    {
+      "at": "2026-09-23T01:50:49.060Z",
       "brokenLinks": 0,
       "checkedLinks": 6
     }
