@@ -8,7 +8,7 @@ const configPath = path.join(root, 'config', 'sites.json');
 const outputPath = path.join(root, 'data', 'links.json');
 const TIMEOUT_MS = 12000;
 const MAX_LINKS = 30;
-const UA = 'SiteControlCenter-LinkCheck/1.0';
+const UA = 'SiteControlCenter-LinkCheck/1.1';
 
 async function checkUrl(url) {
   const ctrl = new AbortController();
