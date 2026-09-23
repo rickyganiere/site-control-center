@@ -1,12 +1,80 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-09-23T01:34:07.998Z",
   "summary": {
-    "tracked": 0,
-    "visible": 0,
-    "successful": 0,
+    "tracked": 4,
+    "visible": 2,
+    "successful": 1,
     "failing": 0,
-    "running": 0
+    "running": 1
   },
-  "sites": [],
-  "history": []
+  "sites": [
+    {
+      "id": "advault-ai",
+      "repo": "rickyganiere/Advault",
+      "workflow": "Validate AdVault",
+      "kind": "CI",
+      "available": false,
+      "private": true,
+      "note": "Private repository status requires optional GITHUB_MONITOR_TOKEN secret."
+    },
+    {
+      "id": "merchant-scanner",
+      "repo": "rickyganiere/Nextgen-Crawler",
+      "workflow": "Deploy Merchant Radar",
+      "kind": "Deploy",
+      "available": false,
+      "private": true,
+      "note": "Private repository status requires optional GITHUB_MONITOR_TOKEN secret."
+    },
+    {
+      "id": "dcb-expansion-radar",
+      "repo": "rickyganiere/dcb-expansion-radar",
+      "workflow": "Validate Radar",
+      "kind": "CI",
+      "available": true,
+      "private": false,
+      "latest": {
+        "id": 35685920252,
+        "name": "Validate Radar",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "pull_request",
+        "branch": "feature/radar-next",
+        "sha": "98e79e6544f933870225075d6cc6b5419502cbb6",
+        "title": "Radar Next: D1 Discovery, Automation Health and Source Manager",
+        "createdAt": "2026-09-22T04:11:11Z",
+        "updatedAt": "2026-09-22T04:11:28Z",
+        "url": "https://github.com/rickyganiere/dcb-expansion-radar/actions/runs/35685920252"
+      }
+    },
+    {
+      "id": "site-control-center",
+      "repo": "rickyganiere/site-control-center",
+      "workflow": "Deploy dashboard",
+      "kind": "Deploy",
+      "available": true,
+      "private": false,
+      "latest": {
+        "id": 35806807263,
+        "name": "Deploy dashboard",
+        "status": "in_progress",
+        "conclusion": null,
+        "event": "push",
+        "branch": "main",
+        "sha": "854b9a658554f87eb842c7311a1d70866a4f8b42",
+        "title": "fix: serialize monitoring workflow updates",
+        "createdAt": "2026-09-23T01:33:58Z",
+        "updatedAt": "2026-09-23T01:34:04Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35806807263"
+      }
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-09-23T01:34:07.998Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
+    }
+  ]
 }
