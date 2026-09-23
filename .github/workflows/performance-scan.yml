@@ -9,14 +9,11 @@ on:
     paths:
       - 'config/sites.json'
       - 'scripts/pagespeed.mjs'
+      - 'scripts/publish-snapshot.mjs'
       - '.github/workflows/performance-scan.yml'
 
 permissions:
   contents: write
-
-concurrency:
-  group: site-performance-writes
-  cancel-in-progress: false
 
 jobs:
   performance:
@@ -31,29 +28,7 @@ jobs:
           node-version: '22'
       - name: Run PageSpeed / Lighthouse checks
         run: node scripts/pagespeed.mjs
-      - name: Save performance snapshot
-        run: |
-          if git diff --quiet -- data/performance.json; then
-            echo "No changes"
-            exit 0
-          fi
-          cp data/performance.json /tmp/performance.json
-          git config user.name "site-control-bot"
-          git config user.email "site-control-bot@users.noreply.github.com"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git reset --hard origin/main
-            cp /tmp/performance.json data/performance.json
-            if git diff --quiet -- data/performance.json; then
-              echo "No changes after refresh"
-              exit 0
-            fi
-            git add data/performance.json
-            git commit -m "chore: update performance snapshot"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push race on attempt $attempt; retrying"
-          done
-          echo "Could not save snapshot after 3 attempts"
-          exit 1
+      - name: Publish snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/publish-snapshot.mjs data/performance.json "chore: update performance snapshot"
