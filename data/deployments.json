@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-23T01:42:28.041Z",
+  "generatedAt": "2026-09-23T01:43:31.955Z",
   "summary": {
-    "tracked": 4,
+    "tracked": 2,
     "visible": 2,
     "successful": 1,
     "failing": 0,
@@ -9,28 +9,6 @@
     "stale": 0
   },
   "sites": [
-    {
-      "id": "advault-ai",
-      "repo": "rickyganiere/Advault",
-      "workflow": "Validate AdVault",
-      "kind": "CI",
-      "available": false,
-      "private": true,
-      "note": "Live app monitoring is active. Private GitHub workflow status needs the optional GITHUB_MONITOR_TOKEN secret.",
-      "latest": null,
-      "stale": false
-    },
-    {
-      "id": "merchant-scanner",
-      "repo": "rickyganiere/Nextgen-Crawler",
-      "workflow": "Deploy Merchant Radar",
-      "kind": "Deploy",
-      "available": false,
-      "private": true,
-      "note": "Live app monitoring is active. Private GitHub workflow status needs the optional GITHUB_MONITOR_TOKEN secret.",
-      "latest": null,
-      "stale": false
-    },
     {
       "id": "dcb-expansion-radar",
       "repo": "rickyganiere/dcb-expansion-radar",
@@ -62,17 +40,17 @@
       "private": false,
       "stale": false,
       "latest": {
-        "id": 35807391065,
+        "id": 35807457186,
         "name": "Deploy dashboard",
         "status": "in_progress",
         "conclusion": null,
         "event": "push",
         "branch": "main",
-        "sha": "43c7907a3b9d68eb90f5bd9773f0ad2fced0461a",
-        "title": "fix: preserve GitHub status and avoid cross-repo token 403",
-        "createdAt": "2026-09-23T01:42:21Z",
-        "updatedAt": "2026-09-23T01:42:26Z",
-        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807391065"
+        "sha": "43c02d3462bb0dc32b3b827bf402fb585b4d088b",
+        "title": "privacy: remove private repository metadata from public config",
+        "createdAt": "2026-09-23T01:43:20Z",
+        "updatedAt": "2026-09-23T01:43:24Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807457186"
       }
     }
   ],
@@ -103,6 +81,12 @@
     },
     {
       "at": "2026-09-23T01:42:28.041Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
+    },
+    {
+      "at": "2026-09-23T01:43:31.955Z",
       "successful": 1,
       "failing": 0,
       "running": 1
