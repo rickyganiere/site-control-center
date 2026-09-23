@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T01:24:11.112Z",
+  "generatedAt": "2026-09-23T01:31:20.944Z",
   "summary": {
     "totalSites": 5,
     "online": 4,
@@ -13,11 +13,11 @@
       "id": "advault-ai",
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
-      "checkedAt": "2026-09-23T01:24:07.398Z",
+      "checkedAt": "2026-09-23T01:31:17.728Z",
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 312,
+        "responseMs": 228,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -71,11 +71,11 @@
       "id": "merchant-scanner",
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
-      "checkedAt": "2026-09-23T01:24:07.836Z",
+      "checkedAt": "2026-09-23T01:31:18.049Z",
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 149,
+        "responseMs": 114,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -159,11 +159,11 @@
       "id": "affiliate-discovery",
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
-      "checkedAt": "2026-09-23T01:24:08.096Z",
+      "checkedAt": "2026-09-23T01:31:18.239Z",
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 1032,
+        "responseMs": 711,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -253,12 +253,12 @@
       "id": "dcb-expansion-radar",
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
-      "checkedAt": "2026-09-23T01:24:09.756Z",
+      "checkedAt": "2026-09-23T01:31:19.778Z",
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 833,
-        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjY5NDksIm5iZiI6MTc5MDEyNjY0OSwiaWF0IjoxNzkwMTI2NjQ5LCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiYTVjNTJmYTcyZDkwNTg5ZGIwZjg1YWQyZGQ4MzM2Y2IzN2IxNTExNmJlYTI0ZWUzNDJmMWU3MTE0N2Y3YjI2ZiJ9.JlIQ9JjVoWNS3y_w5ax8IIScTXw6Mm1gACGwliz8rOjt0SBSVqrXczioXqSS450uJZjf95t9BDmepktHwTs_vHdgpjd71B2GfkXWdqR8R_Q4V0zGrNR1Df_HRhrUa7_ZWOpiYHh4Jd2GLDGVcwKhAEhGZ8OMAchnPsFu56feoUurULnId4BuftN3ff7Tb76aTvcI5SD_TYv82pWhUbxtMjmbG6rRX2Cj2yvhXDq0bTtKuMH86-2tMiUne0yUv9U9P1CHDNW3SiOXX3grDrz4Gf5vXcd_aq94jUDnmbfhBEMFHpDvq0fDQWHcUSggAku-8WUv007x1K9XC6lHqMffmg&redirect_url=%2F",
+        "responseMs": 746,
+        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjczNzksIm5iZiI6MTc5MDEyNzA3OSwiaWF0IjoxNzkwMTI3MDc5LCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiZWQ2NmQ1YTY1Y2I4YTNmYTBmNjc3NzI5ZmMzNTlhNDBjYzAwNDVkMWM3MDgzYjM2YzBiYjQzMzkzM2IyODU5YiJ9.JDecurKflr0A2mbRSiZWrk8W9hT7c6v1EIx2Koe95O5AGF26cawxZ7n7XuxQhzxVOqGdc2TdJ1JOelSo57pYIIzje5-sfIn7jZKzIV--67fI_i6R7pH2Vqh3FuzqERoxcFQ8c8N1tJTA4FK2s463qFvAvUeZO25Znii0kXGzOBSFq_FSdYYKt7KyZPQFHmW5QsLvHnPcJdk77UTpCkTHTbHKEE-sWYUk2LGzWEIjLxMufdZuK2QIotKCiL4k32etUiPp1_8pcdkugG70_Uc_4nyNI6PYSnQAStRX19shFdwalBsipz2xyH1nCWWU-j5HtuToygnjoe3OfvqlnuyCmQ&redirect_url=%2F",
         "contentType": "text/html"
       },
       "headers": {
@@ -340,11 +340,11 @@
       "id": "site-control-center",
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
-      "checkedAt": "2026-09-23T01:24:10.784Z",
+      "checkedAt": "2026-09-23T01:31:20.667Z",
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 151,
+        "responseMs": 106,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -429,6 +429,13 @@
     },
     {
       "at": "2026-09-23T01:24:11.112Z",
+      "totalSites": 5,
+      "online": 4,
+      "avgScore": 64,
+      "critical": 2
+    },
+    {
+      "at": "2026-09-23T01:31:20.944Z",
       "totalSites": 5,
       "online": 4,
       "avgScore": 64,
