@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T01:34:02.458Z",
+  "generatedAt": "2026-09-23T01:35:34.860Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-09-23T01:34:00.034Z",
+      "checkedAt": "2026-09-23T01:35:31.738Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 190,
+        "responseMs": 287,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -77,7 +77,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-09-23T01:34:00.361Z",
+      "checkedAt": "2026-09-23T01:35:32.115Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -85,7 +85,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 242,
+        "responseMs": 149,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -148,7 +148,7 @@
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-09-23T01:34:00.670Z",
+      "checkedAt": "2026-09-23T01:35:32.302Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -160,7 +160,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 680,
+        "responseMs": 1278,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -217,7 +217,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-09-23T01:34:01.380Z",
+      "checkedAt": "2026-09-23T01:35:33.610Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -229,8 +229,8 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 697,
-        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjc1NDEsIm5iZiI6MTc5MDEyNzI0MSwiaWF0IjoxNzkwMTI3MjQxLCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiODk4NGEwYjYzYWRkZDhmYjNlZTA2MjIwZmZlMDhiODE2MDUxNmYwMjI3YjYwZGMyMzM2MWJhNTU1YTUyZTU5ZCJ9.bsZN2Ve5TMEWlB0Da-1Mihfs2piFlSzuIvuTWcVn2i9ARu_DrXoiPRWLmylPjS7D4fHo2xXLgLP2X3KZxp4soV7BA4tOfOWTVrmrOtoyW9BVHOdGm1RV-S1oCDwFp_me3JmTwioR95KF_WhIT8X9B4FymH8f7HNLCRWmKxOQKlw8fohkmHl93vbI6ZP0SZAmFx5i4nOiEjllx0RcnQs6wVXvMzt2QytwkWA68ObL3DejzKYsPo2gz_Y7V_m-UaXGm1p1GHGd5zdooag8miRHBfBzRU5-1z0aCptqwFvqM03Ne1fzDOQVB3q8g1lDkd2KqUkzujWrxZqvpGfGvaS5hA&redirect_url=%2F",
+        "responseMs": 832,
+        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjc2MzMsIm5iZiI6MTc5MDEyNzMzMywiaWF0IjoxNzkwMTI3MzMzLCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiNzM5Zjk0MjY2MTBmNDc3YzVlZGMxM2RiYzEyMDU4NzgyYTM2MDBlOWY1ZTFiZDgzNDYxNDY3MjgzZDlhNjY0YSJ9.gUD9e02UzVUIjXge8i1DNbu36Qqwd6-MM5p8d-HPPwNDzwniaAdHlAqe1JG-8HHAokJuhwrr_dxufauUhFJbhm4tDofdSgNlU2hVJZ1zkJHqiXTx0bq5ZbEJpJ8q69abtoW7AMXxnNQB6oWZnQRqQOVGf2ydLbNUKQf6G142HiWhDHcBgHkV7CHizSZ9MdDJxQy0xpkmAd8ozcUxu_Pb_HweAsffPfWgFCjM9UGaP0uBLozg3QNbB0aw9vTMBq_39lRJSrpGqkGWuC-08rlkDFSkzS1vFDTma3uazAYYBaHpsu1-gYVU745vmWeyEX4Eh8oDQTGmBe_28k58icpi4Q&redirect_url=%2F",
         "contentType": "text/html"
       },
       "headers": {
@@ -273,7 +273,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-09-23T01:34:02.130Z",
+      "checkedAt": "2026-09-23T01:35:34.477Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -281,7 +281,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 121,
+        "responseMs": 154,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -356,6 +356,13 @@
     },
     {
       "at": "2026-09-23T01:34:02.458Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 93,
+      "critical": 0
+    },
+    {
+      "at": "2026-09-23T01:35:34.860Z",
       "totalSites": 5,
       "online": 5,
       "avgScore": 93,
