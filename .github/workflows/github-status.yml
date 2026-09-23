@@ -9,15 +9,12 @@ on:
     paths:
       - 'config/sites.json'
       - 'scripts/github-status.mjs'
+      - 'scripts/publish-snapshot.mjs'
       - '.github/workflows/github-status.yml'
 
 permissions:
   contents: write
   actions: read
-
-concurrency:
-  group: site-github-writes
-  cancel-in-progress: false
 
 jobs:
   github-status:
@@ -32,29 +29,7 @@ jobs:
           node-version: '22'
       - name: Check GitHub workflows
         run: node scripts/github-status.mjs
-      - name: Save GitHub status snapshot
-        run: |
-          if git diff --quiet -- data/deployments.json; then
-            echo "No changes"
-            exit 0
-          fi
-          cp data/deployments.json /tmp/deployments.json
-          git config user.name "site-control-bot"
-          git config user.email "site-control-bot@users.noreply.github.com"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git reset --hard origin/main
-            cp /tmp/deployments.json data/deployments.json
-            if git diff --quiet -- data/deployments.json; then
-              echo "No changes after refresh"
-              exit 0
-            fi
-            git add data/deployments.json
-            git commit -m "chore: update GitHub status snapshot"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push race on attempt $attempt; retrying"
-          done
-          echo "Could not save snapshot after 3 attempts"
-          exit 1
+      - name: Publish snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/publish-snapshot.mjs data/deployments.json "chore: update GitHub status snapshot"
