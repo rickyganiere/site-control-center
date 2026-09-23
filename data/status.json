@@ -1,6 +1,80 @@
 {
-  "generatedAt": null,
-  "summary": {"totalSites": 0, "online": 0, "healthy": 0, "warnings": 0, "critical": 0, "avgScore": 0},
-  "sites": [],
-  "history": []
+  "generatedAt": "2026-09-23T01:03:28.858Z",
+  "summary": {
+    "totalSites": 1,
+    "online": 1,
+    "healthy": 1,
+    "warnings": 0,
+    "critical": 0,
+    "avgScore": 96
+  },
+  "sites": [
+    {
+      "id": "advault-ai",
+      "name": "AdVault AI",
+      "url": "https://advault-ai.com",
+      "checkedAt": "2026-09-23T01:03:28.299Z",
+      "http": {
+        "ok": true,
+        "status": 200,
+        "responseMs": 412,
+        "finalUrl": "https://advault-ai.com/",
+        "contentType": "text/html"
+      },
+      "headers": {
+        "server": "cloudflare",
+        "cacheControl": "public, max-age=0, must-revalidate",
+        "xRobotsTag": "",
+        "hsts": false,
+        "csp": false
+      },
+      "seo": {
+        "title": "AdVault — Campaign Intelligence &amp; Ad Research Platform",
+        "description": "Scan campaign URLs, verify tracking, research competitor ads and turn campaign evidence into your next media buying test.",
+        "canonical": "https://advault-ai.com/",
+        "h1": "Scan the funnel. See the signal. Build the next test.",
+        "h1Count": 1,
+        "lang": "en",
+        "viewport": true,
+        "openGraph": true,
+        "noindex": false
+      },
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://advault-ai.com/robots.txt"
+      },
+      "sitemap": {
+        "ok": true,
+        "status": 200,
+        "url": "https://advault-ai.com/sitemap.xml"
+      },
+      "ssl": {
+        "ok": true,
+        "expiresAt": "2026-12-21T04:08:41.000Z",
+        "daysRemaining": 89,
+        "issuer": "Google Trust Services",
+        "subject": "advault-ai.com"
+      },
+      "score": 96,
+      "issues": [
+        {
+          "check": "HSTS",
+          "severity": "low",
+          "message": "Strict-Transport-Security header not detected.",
+          "weight": 4
+        }
+      ],
+      "health": "healthy"
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-09-23T01:03:28.858Z",
+      "totalSites": 1,
+      "online": 1,
+      "avgScore": 96,
+      "critical": 0
+    }
+  ]
 }
