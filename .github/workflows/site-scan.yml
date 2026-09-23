@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
+  push:
+    branches: ['main']
+    paths:
+      - 'config/sites.json'
+      - 'scripts/scan.mjs'
+      - '.github/workflows/site-scan.yml'
 
 permissions:
   contents: write
