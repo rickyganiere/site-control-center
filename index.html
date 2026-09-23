@@ -73,7 +73,7 @@ function deployBlock(x){
  const label=r.status==='completed'?(r.conclusion||'completed'):r.status;
  const cls=label==='success'?'goodText':label==='failure'?'badText':'warnText';
  const stale=g.stale?' · cached':'';
- return '<div class="strip"><div class="stripTop"><div class="stripTitle">'+esc(g.kind||'CI')+' · '+esc(g.workflow||r.name||'GitHub')+'</div><b class="'+cls+'">'+esc(label||'—')+'</b></div><div class="muted" style="margin-top:6px">'+esc(r.title||'')+' · '+esc(ago(r.updatedAt||r.createdAt))+esc(stale)+'</div></div>';
+ return '<div class="strip"><div class="stripTop"><div class="stripTitle">'+esc(g.kind||'CI')+' · '+esc(g.workflow||r.name||'GitHub')+'</div><b class="'+cls+'">'+esc(label||'—')+'</b></div><div class="muted" style="margin-top:6px">'+esc(r.title||'')+' · '+esc(ago(r.updatedAt||r.createdAt))+esc(stale)+(r.url?' · <a target="_blank" rel="noopener" href="'+esc(r.url)+'">Open run</a>':'')+'</div></div>';
 }
 function facts(x){
  const mode=x.monitorMode||'website'; const ssl=x.ssl?.ok?x.ssl.daysRemaining+' days':'—';
