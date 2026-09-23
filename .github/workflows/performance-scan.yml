@@ -1,0 +1,41 @@
+name: Daily performance scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 4 * * *'
+  push:
+    branches: ['main']
+    paths:
+      - 'config/sites.json'
+      - 'scripts/pagespeed.mjs'
+      - '.github/workflows/performance-scan.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run PageSpeed checks
+        run: node scripts/pagespeed.mjs
+      - name: Save performance snapshot
+        run: |
+          if git diff --quiet -- data/performance.json; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "site-control-bot"
+          git config user.email "site-control-bot@users.noreply.github.com"
+          git add data/performance.json
+          git commit -m "chore: update performance snapshot"
+          git pull --rebase origin main
+          git push
