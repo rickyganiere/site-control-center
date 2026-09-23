@@ -13,24 +13,24 @@ A zero-database, zero-paid-dependency control center for website and application
 - 60-scan health history
 
 ### Performance scan — daily
-- Google PageSpeed Insights
-- Mobile and desktop Lighthouse performance
-- Accessibility, Best Practices and SEO scores
+- Free local Lighthouse baseline for mobile and desktop
+- Performance, Accessibility, Best Practices and SEO scores
 - Lab LCP, CLS, FCP, TBT, Speed Index and Time to Interactive
-- Chrome UX Report field Core Web Vitals when Google has enough real-user data
-- Optional `PAGESPEED_API_KEY` secret; when Google rate-limits anonymous API calls, the workflow automatically falls back to local Lighthouse CLI
+- Top Lighthouse performance recommendations
+- Optional Google PageSpeed API integration for field Core Web Vitals when a free `PAGESPEED_API_KEY` secret is configured
+- Without an API key, the workflow does not make anonymous PageSpeed calls, avoiding unnecessary rate-limit errors
 
 ### Broken-link scan — daily
 - Bounded internal-link crawl on public websites
 - Checks up to 30 same-origin links per site
-- Stores broken-link count and the affected URLs
+- Stores broken-link count and affected URLs
 - Protected/private apps are intentionally skipped
 
 ### GitHub status — every 6 hours
-- Latest selected GitHub Actions workflow
+- Latest selected GitHub Actions workflow for public repositories
 - Success / failure / running state
-- Public repositories work without an extra token
-- Private repositories can optionally use a `GITHUB_MONITOR_TOKEN` secret
+- Private repository names and workflow metadata are intentionally not published
+- Private applications still receive live HTTP/TLS/security monitoring
 
 ## Monitoring modes
 
@@ -49,11 +49,14 @@ config/sites.json
       |
       +--> site-scan.yml --------> data/status.json
       +--> performance-scan.yml -> data/performance.json
+      +--> link-scan.yml --------> data/links.json
       +--> github-status.yml ----> data/deployments.json
                                       |
                                       v
                                 GitHub Pages dashboard
 ```
+
+Snapshot writers rebase onto the newest `main` state and retry branch races, so parallel monitoring jobs do not overwrite unrelated updates.
 
 No database, VPS, Datadog or paid monitoring SaaS is required.
 
@@ -64,7 +67,20 @@ No database, VPS, Datadog or paid monitoring SaaS is required.
 - Performance scan only once per day
 - No persistent database
 - No paid API required for baseline operation
+- Optional PageSpeed API key remains free and is only needed for field-data enrichment
 
 ## Add a site
 
-Edit `config/sites.json`, classify its `monitorMode`, and enable `performance` only where a Lighthouse/PageSpeed test is useful.
+Edit `config/sites.json`, classify its `monitorMode`, and enable `performance` only where a Lighthouse test is useful.
+
+## Current dashboard behavior
+
+The dashboard surfaces:
+- overall online/healthy/critical counts
+- average health and mobile performance
+- broken-link count
+- per-site health, TLS, security and SEO/app checks
+- Lighthouse lab performance
+- top performance fixes
+- public GitHub workflow status
+- a **Needs attention** section that promotes actionable warnings first
