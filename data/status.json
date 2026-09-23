@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-23T01:49:21.507Z",
+  "generatedAt": "2026-09-23T01:49:34.398Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
-    "healthy": 4,
-    "warnings": 1,
+    "healthy": 3,
+    "warnings": 2,
     "critical": 0,
     "avgScore": 93
   },
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-09-23T01:49:18.431Z",
+      "checkedAt": "2026-09-23T01:49:32.523Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 345,
+        "responseMs": 166,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -70,6 +70,10 @@
           "weight": 4
         }
       ],
+      "brand": {
+        "expectedTitleContains": "AdVault",
+        "ok": true
+      },
       "health": "healthy"
     },
     {
@@ -77,7 +81,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-09-23T01:49:18.910Z",
+      "checkedAt": "2026-09-23T01:49:32.772Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -85,7 +89,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 162,
+        "responseMs": 81,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -123,6 +127,11 @@
       "score": 90,
       "issues": [
         {
+          "check": "Brand title",
+          "severity": "medium",
+          "message": "Page title does not contain expected brand \"Merchant Scanner\". Current title: \"Merchant Digger · Private Beta\"."
+        },
+        {
           "check": "HSTS",
           "severity": "low",
           "message": "Strict-Transport-Security header not detected.",
@@ -141,14 +150,18 @@
           "weight": 2
         }
       ],
-      "health": "healthy"
+      "brand": {
+        "expectedTitleContains": "Merchant Scanner",
+        "ok": false
+      },
+      "health": "warning"
     },
     {
       "id": "affiliate-discovery",
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-09-23T01:49:19.137Z",
+      "checkedAt": "2026-09-23T01:49:32.880Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -160,7 +173,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 1185,
+        "responseMs": 684,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -217,7 +230,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-09-23T01:49:20.367Z",
+      "checkedAt": "2026-09-23T01:49:33.583Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -229,7 +242,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 704,
+        "responseMs": 471,
         "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev",
         "contentType": "text/html"
       },
@@ -273,7 +286,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-09-23T01:49:21.122Z",
+      "checkedAt": "2026-09-23T01:49:34.078Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -281,7 +294,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 157,
+        "responseMs": 121,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -322,6 +335,10 @@
       },
       "score": 100,
       "issues": [],
+      "brand": {
+        "expectedTitleContains": "Site Control Center",
+        "ok": true
+      },
       "health": "healthy"
     }
   ],
@@ -390,7 +407,7 @@
       "critical": 0
     },
     {
-      "at": "2026-09-23T01:49:21.507Z",
+      "at": "2026-09-23T01:49:34.398Z",
       "totalSites": 5,
       "online": 5,
       "avgScore": 93,
