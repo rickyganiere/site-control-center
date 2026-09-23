@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: site-control-writes
+  group: site-performance-writes
   cancel-in-progress: false
 
 jobs:
