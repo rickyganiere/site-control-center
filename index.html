@@ -90,7 +90,7 @@ function attentionBlock(){
  const items=[];
  for(const x of health.sites||[]){
    if(x.health==='critical') items.push({sev:'badText',site:x.name,msg:'Availability or health is critical.'});
-   else if(x.health==='warning' && x.monitorMode!=='protected') items.push({sev:'warnText',site:x.name,msg:'Health score needs review ('+(x.score??0)+'/100).'});
+   else if(x.health==='warning' && x.monitorMode!=='protected'){const issue=(x.issues||[]).find(i=>['high','medium'].includes(i.severity))||(x.issues||[])[0];items.push({sev:'warnText',site:x.name,msg:issue?.message||('Health needs review ('+(x.score??0)+'/100).')});}
  }
  for(const p of performance.sites||[]){
    const mobile=p.mobile?.scores?.performance;
