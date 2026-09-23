@@ -82,7 +82,7 @@ async function runPsi(def, strategy) {
   return parseLighthouse(json.lighthouseResult, strategy, 'pagespeed-api', fieldData(json));
 }
 
-async function runLighthouse(def, strategy, psiError) {
+async function runLighthouse(def, strategy, extra = {}) {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'site-control-lh-'));
   const out = path.join(dir, `${def.id}-${strategy}.json`);
   const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
@@ -108,20 +108,33 @@ async function runLighthouse(def, strategy, psiError) {
     if (proc.error) throw proc.error;
     if (proc.status !== 0) throw new Error((proc.stderr || proc.stdout || `Lighthouse exited ${proc.status}`).trim().slice(0, 500));
     const json = JSON.parse(await fs.readFile(out, 'utf8'));
-    return parseLighthouse(json, strategy, 'lighthouse-cli', { available: false }, { psiError });
+    return parseLighthouse(json, strategy, 'lighthouse-cli', { available: false }, extra);
   } finally {
     await fs.rm(dir, { recursive: true, force: true });
   }
 }
 
 async function run(def, strategy) {
+  if (!process.env.PAGESPEED_API_KEY) {
+    try {
+      return await runLighthouse(def, strategy, { psiSkipped: true });
+    } catch (error) {
+      return {
+        strategy,
+        fetchedAt: new Date().toISOString(),
+        error: error?.message || String(error),
+        psiSkipped: true,
+      };
+    }
+  }
+
   try {
     return await runPsi(def, strategy);
   } catch (error) {
     const psiError = error?.message || String(error);
     console.warn(`PageSpeed API ${strategy} failed for ${def.name}: ${psiError}. Falling back to Lighthouse CLI.`);
     try {
-      return await runLighthouse(def, strategy, psiError);
+      return await runLighthouse(def, strategy, { psiError });
     } catch (fallbackError) {
       return {
         strategy,
@@ -152,7 +165,8 @@ const summary = {
   mobileAvg: mobileScores.length ? Math.round(mobileScores.reduce((a,b)=>a+b,0)/mobileScores.length) : null,
   desktopAvg: desktopScores.length ? Math.round(desktopScores.reduce((a,b)=>a+b,0)/desktopScores.length) : null,
   errors: results.reduce((n,x)=>n + (x.mobile?.error?1:0) + (x.desktop?.error?1:0), 0),
-  fallbacks: results.reduce((n,x)=>n + (x.mobile?.source==='lighthouse-cli'?1:0) + (x.desktop?.source==='lighthouse-cli'?1:0), 0),
+  lighthouseRuns: results.reduce((n,x)=>n + (x.mobile?.source==='lighthouse-cli'?1:0) + (x.desktop?.source==='lighthouse-cli'?1:0), 0),
+  fieldDataAvailable: results.reduce((n,x)=>n + (x.mobile?.field?.available?1:0) + (x.desktop?.field?.available?1:0), 0),
 };
 const historyPoint = { at: new Date().toISOString(), mobileAvg: summary.mobileAvg, desktopAvg: summary.desktopAvg };
 const payload = {
