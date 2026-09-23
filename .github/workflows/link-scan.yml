@@ -1,0 +1,42 @@
+name: Daily broken link scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * *'
+  push:
+    branches: ['main']
+    paths:
+      - 'scripts/links.mjs'
+      - '.github/workflows/link-scan.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-control-writes
+  cancel-in-progress: false
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check internal links
+        run: node scripts/links.mjs
+      - name: Save link snapshot
+        run: |
+          if git diff --quiet -- data/links.json; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "site-control-bot"
+          git config user.email "site-control-bot@users.noreply.github.com"
+          git add data/links.json
+          git commit -m "chore: update broken link snapshot"
+          git pull --rebase origin main
+          git push
