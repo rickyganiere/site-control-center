@@ -9,14 +9,11 @@ on:
     paths:
       - 'config/sites.json'
       - 'scripts/scan.mjs'
+      - 'scripts/publish-snapshot.mjs'
       - '.github/workflows/site-scan.yml'
 
 permissions:
   contents: write
-
-concurrency:
-  group: site-health-writes
-  cancel-in-progress: false
 
 jobs:
   scan:
@@ -29,29 +26,7 @@ jobs:
           node-version: '22'
       - name: Scan sites
         run: node scripts/scan.mjs
-      - name: Save latest snapshot
-        run: |
-          if git diff --quiet -- data/status.json; then
-            echo "No changes"
-            exit 0
-          fi
-          cp data/status.json /tmp/status.json
-          git config user.name "site-control-bot"
-          git config user.email "site-control-bot@users.noreply.github.com"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git reset --hard origin/main
-            cp /tmp/status.json data/status.json
-            if git diff --quiet -- data/status.json; then
-              echo "No changes after refresh"
-              exit 0
-            fi
-            git add data/status.json
-            git commit -m "chore: update site health snapshot"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push race on attempt $attempt; retrying"
-          done
-          echo "Could not save snapshot after 3 attempts"
-          exit 1
+      - name: Publish snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/publish-snapshot.mjs data/status.json "chore: update site health snapshot"
