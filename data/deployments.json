@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T01:34:07.998Z",
+  "generatedAt": "2026-09-23T01:35:47.835Z",
   "summary": {
     "tracked": 4,
     "visible": 2,
@@ -55,23 +55,29 @@
       "available": true,
       "private": false,
       "latest": {
-        "id": 35806807263,
+        "id": 35806916765,
         "name": "Deploy dashboard",
         "status": "in_progress",
         "conclusion": null,
         "event": "push",
         "branch": "main",
-        "sha": "854b9a658554f87eb842c7311a1d70866a4f8b42",
-        "title": "fix: serialize monitoring workflow updates",
-        "createdAt": "2026-09-23T01:33:58Z",
-        "updatedAt": "2026-09-23T01:34:04Z",
-        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35806807263"
+        "sha": "15c668949082301c26d662aac026a080aac431e4",
+        "title": "fix: serialize GitHub status scans",
+        "createdAt": "2026-09-23T01:35:28Z",
+        "updatedAt": "2026-09-23T01:35:39Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35806916765"
       }
     }
   ],
   "history": [
     {
       "at": "2026-09-23T01:34:07.998Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
+    },
+    {
+      "at": "2026-09-23T01:35:47.835Z",
       "successful": 1,
       "failing": 0,
       "running": 1
