@@ -32,4 +32,5 @@ jobs:
       - name: Publish snapshot
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/publish-snapshot.mjs data/deployments.json "chore: update GitHub status snapshot"
+        run: |
+          node scripts/publish-snapshot.mjs data/deployments.json "chore: update GitHub status snapshot"
