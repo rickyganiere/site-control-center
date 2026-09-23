@@ -1,17 +1,20 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import os from 'node:os';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const configPath = path.join(root, 'config', 'sites.json');
 const outputPath = path.join(root, 'data', 'performance.json');
-const TIMEOUT_MS = 45000;
+const PSI_TIMEOUT_MS = 45000;
+const LIGHTHOUSE_TIMEOUT_MS = 180000;
 const API = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
 
 async function fetchJson(url) {
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  const timer = setTimeout(() => ctrl.abort(), PSI_TIMEOUT_MS);
   try {
     const res = await fetch(url, { signal: ctrl.signal, headers: { accept: 'application/json' } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -41,14 +44,14 @@ function fieldData(json) {
   };
 }
 
-function parse(json, strategy) {
-  const lr = json.lighthouseResult || {};
+function parseLighthouse(lr, strategy, source, field = { available: false }, extra = {}) {
   const c = lr.categories || {};
   const a = lr.audits || {};
   return {
     strategy,
+    source,
     fetchedAt: new Date().toISOString(),
-    finalUrl: lr.finalDisplayedUrl || lr.finalUrl || null,
+    finalUrl: lr.finalDisplayedUrl || lr.finalUrl || lr.requestedUrl || null,
     scores: {
       performance: pct(c.performance?.score),
       accessibility: pct(c.accessibility?.score),
@@ -63,21 +66,70 @@ function parse(json, strategy) {
       speedIndexMs: auditNum(a['speed-index']),
       interactiveMs: auditNum(a.interactive),
     },
-    field: fieldData(json),
+    field,
+    ...extra,
   };
 }
 
-async function run(def, strategy) {
+async function runPsi(def, strategy) {
   const q = new URLSearchParams();
   q.set('url', def.url);
   q.set('strategy', strategy);
   for (const cat of ['performance', 'accessibility', 'best-practices', 'seo']) q.append('category', cat);
   if (process.env.PAGESPEED_API_KEY) q.set('key', process.env.PAGESPEED_API_KEY);
+  const json = await fetchJson(`${API}?${q.toString()}`);
+  if (!json.lighthouseResult) throw new Error('No Lighthouse result returned');
+  return parseLighthouse(json.lighthouseResult, strategy, 'pagespeed-api', fieldData(json));
+}
+
+async function runLighthouse(def, strategy, psiError) {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'site-control-lh-'));
+  const out = path.join(dir, `${def.id}-${strategy}.json`);
+  const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+  const args = [
+    '--yes',
+    'lighthouse@latest',
+    def.url,
+    '--quiet',
+    '--output=json',
+    `--output-path=${out}`,
+    '--only-categories=performance,accessibility,best-practices,seo',
+    '--chrome-flags=--headless --no-sandbox --disable-dev-shm-usage'
+  ];
+  if (strategy === 'desktop') args.push('--preset=desktop');
+
+  const proc = spawnSync(npx, args, {
+    encoding: 'utf8',
+    timeout: LIGHTHOUSE_TIMEOUT_MS,
+    maxBuffer: 10 * 1024 * 1024,
+  });
+
   try {
-    const json = await fetchJson(`${API}?${q.toString()}`);
-    return parse(json, strategy);
+    if (proc.error) throw proc.error;
+    if (proc.status !== 0) throw new Error((proc.stderr || proc.stdout || `Lighthouse exited ${proc.status}`).trim().slice(0, 500));
+    const json = JSON.parse(await fs.readFile(out, 'utf8'));
+    return parseLighthouse(json, strategy, 'lighthouse-cli', { available: false }, { psiError });
+  } finally {
+    await fs.rm(dir, { recursive: true, force: true });
+  }
+}
+
+async function run(def, strategy) {
+  try {
+    return await runPsi(def, strategy);
   } catch (error) {
-    return { strategy, fetchedAt: new Date().toISOString(), error: error?.message || String(error) };
+    const psiError = error?.message || String(error);
+    console.warn(`PageSpeed API ${strategy} failed for ${def.name}: ${psiError}. Falling back to Lighthouse CLI.`);
+    try {
+      return await runLighthouse(def, strategy, psiError);
+    } catch (fallbackError) {
+      return {
+        strategy,
+        fetchedAt: new Date().toISOString(),
+        error: fallbackError?.message || String(fallbackError),
+        psiError,
+      };
+    }
   }
 }
 
@@ -87,7 +139,7 @@ try { previous = JSON.parse(await fs.readFile(outputPath, 'utf8')); } catch {}
 
 const results = [];
 for (const def of sites.filter(s => s.performance && s.monitorMode !== 'protected')) {
-  console.log(`PageSpeed: ${def.name}`);
+  console.log(`Performance: ${def.name}`);
   const mobile = await run(def, 'mobile');
   const desktop = await run(def, 'desktop');
   results.push({ id: def.id, name: def.name, url: def.url, mobile, desktop });
@@ -100,6 +152,7 @@ const summary = {
   mobileAvg: mobileScores.length ? Math.round(mobileScores.reduce((a,b)=>a+b,0)/mobileScores.length) : null,
   desktopAvg: desktopScores.length ? Math.round(desktopScores.reduce((a,b)=>a+b,0)/desktopScores.length) : null,
   errors: results.reduce((n,x)=>n + (x.mobile?.error?1:0) + (x.desktop?.error?1:0), 0),
+  fallbacks: results.reduce((n,x)=>n + (x.mobile?.source==='lighthouse-cli'?1:0) + (x.desktop?.source==='lighthouse-cli'?1:0), 0),
 };
 const historyPoint = { at: new Date().toISOString(), mobileAvg: summary.mobileAvg, desktopAvg: summary.desktopAvg };
 const payload = {
@@ -109,4 +162,4 @@ const payload = {
   history: [...(previous.history || []), historyPoint].slice(-30),
 };
 await fs.writeFile(outputPath, JSON.stringify(payload, null, 2) + '\n');
-console.log(`Done. Mobile avg: ${summary.mobileAvg ?? 'n/a'}, desktop avg: ${summary.desktopAvg ?? 'n/a'}.`);
+console.log(`Done. Mobile avg: ${summary.mobileAvg ?? 'n/a'}, desktop avg: ${summary.desktopAvg ?? 'n/a'}, errors: ${summary.errors}.`);
