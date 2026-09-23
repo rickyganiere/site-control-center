@@ -1,23 +1,28 @@
 {
-  "generatedAt": "2026-09-23T01:31:20.944Z",
+  "generatedAt": "2026-09-23T01:32:10.345Z",
   "summary": {
     "totalSites": 5,
-    "online": 4,
-    "healthy": 1,
+    "online": 5,
+    "healthy": 3,
     "warnings": 2,
-    "critical": 2,
-    "avgScore": 64
+    "critical": 0,
+    "avgScore": 86
   },
   "sites": [
     {
       "id": "advault-ai",
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
-      "checkedAt": "2026-09-23T01:31:17.728Z",
+      "monitorMode": "website",
+      "checkedAt": "2026-09-23T01:32:07.265Z",
+      "availability": {
+        "ok": true,
+        "expectedStatuses": null
+      },
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 228,
+        "responseMs": 290,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -39,6 +44,13 @@
         "openGraph": true,
         "noindex": false
       },
+      "ssl": {
+        "ok": true,
+        "expiresAt": "2026-12-21T04:08:41.000Z",
+        "daysRemaining": 89,
+        "issuer": "Google Trust Services",
+        "subject": "advault-ai.com"
+      },
       "robots": {
         "ok": true,
         "status": 200,
@@ -48,13 +60,6 @@
         "ok": true,
         "status": 200,
         "url": "https://advault-ai.com/sitemap.xml"
-      },
-      "ssl": {
-        "ok": true,
-        "expiresAt": "2026-12-21T04:08:41.000Z",
-        "daysRemaining": 89,
-        "issuer": "Google Trust Services",
-        "subject": "advault-ai.com"
       },
       "score": 96,
       "issues": [
@@ -71,11 +76,16 @@
       "id": "merchant-scanner",
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
-      "checkedAt": "2026-09-23T01:31:18.049Z",
+      "monitorMode": "app",
+      "checkedAt": "2026-09-23T01:32:07.687Z",
+      "availability": {
+        "ok": true,
+        "expectedStatuses": null
+      },
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 114,
+        "responseMs": 158,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -97,16 +107,6 @@
         "openGraph": false,
         "noindex": false
       },
-      "robots": {
-        "ok": true,
-        "status": 200,
-        "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/robots.txt"
-      },
-      "sitemap": {
-        "ok": false,
-        "status": 200,
-        "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/sitemap.xml"
-      },
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
@@ -114,56 +114,53 @@
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
-      "score": 57,
+      "robots": {
+        "skipped": true
+      },
+      "sitemap": {
+        "skipped": true
+      },
+      "score": 90,
       "issues": [
-        {
-          "check": "Meta description",
-          "severity": "high",
-          "message": "Missing meta description.",
-          "weight": 10
-        },
-        {
-          "check": "Single H1",
-          "severity": "medium",
-          "message": "Expected 1 H1, found 9.",
-          "weight": 10
-        },
-        {
-          "check": "Canonical",
-          "severity": "medium",
-          "message": "Missing canonical URL.",
-          "weight": 8
-        },
-        {
-          "check": "Sitemap",
-          "severity": "medium",
-          "message": "Sitemap is missing or unavailable.",
-          "weight": 8
-        },
         {
           "check": "HSTS",
           "severity": "low",
           "message": "Strict-Transport-Security header not detected.",
-          "weight": 4
+          "weight": 5
+        },
+        {
+          "check": "Meta description",
+          "severity": "low",
+          "message": "Missing meta description.",
+          "weight": 3
         },
         {
           "check": "Open Graph",
           "severity": "low",
           "message": "Basic Open Graph metadata not detected.",
-          "weight": 3
+          "weight": 2
         }
       ],
-      "health": "critical"
+      "health": "healthy"
     },
     {
       "id": "affiliate-discovery",
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
-      "checkedAt": "2026-09-23T01:31:18.239Z",
+      "monitorMode": "protected",
+      "checkedAt": "2026-09-23T01:32:07.904Z",
+      "availability": {
+        "ok": true,
+        "expectedStatuses": [
+          200,
+          401,
+          403
+        ]
+      },
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 711,
+        "responseMs": 1183,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -185,16 +182,6 @@
         "openGraph": false,
         "noindex": false
       },
-      "robots": {
-        "ok": false,
-        "status": 401,
-        "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/robots.txt"
-      },
-      "sitemap": {
-        "ok": false,
-        "status": 401,
-        "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/sitemap.xml"
-      },
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-18T19:33:53.000Z",
@@ -202,63 +189,48 @@
         "issuer": "Google Trust Services",
         "subject": "*.dating-netwo-1613.chatgpt.site"
       },
-      "score": 39,
+      "robots": {
+        "skipped": true
+      },
+      "sitemap": {
+        "skipped": true
+      },
+      "score": 80,
       "issues": [
-        {
-          "check": "HTTP 2xx",
-          "severity": "critical",
-          "message": "Homepage is not returning a successful HTTP status.",
-          "weight": 20
-        },
-        {
-          "check": "Meta description",
-          "severity": "high",
-          "message": "Missing meta description.",
-          "weight": 10
-        },
-        {
-          "check": "Canonical",
-          "severity": "medium",
-          "message": "Missing canonical URL.",
-          "weight": 8
-        },
-        {
-          "check": "robots.txt",
-          "severity": "medium",
-          "message": "robots.txt is missing or unavailable.",
-          "weight": 8
-        },
-        {
-          "check": "Sitemap",
-          "severity": "medium",
-          "message": "Sitemap is missing or unavailable.",
-          "weight": 8
-        },
         {
           "check": "HSTS",
           "severity": "low",
           "message": "Strict-Transport-Security header not detected.",
-          "weight": 4
+          "weight": 10
         },
         {
-          "check": "Open Graph",
+          "check": "CSP",
           "severity": "low",
-          "message": "Basic Open Graph metadata not detected.",
-          "weight": 3
+          "message": "Content-Security-Policy header not detected.",
+          "weight": 10
         }
       ],
-      "health": "critical"
+      "health": "warning"
     },
     {
       "id": "dcb-expansion-radar",
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
-      "checkedAt": "2026-09-23T01:31:19.778Z",
+      "monitorMode": "protected",
+      "checkedAt": "2026-09-23T01:32:09.124Z",
+      "availability": {
+        "ok": true,
+        "expectedStatuses": [
+          200,
+          401,
+          403
+        ]
+      },
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 746,
-        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjczNzksIm5iZiI6MTc5MDEyNzA3OSwiaWF0IjoxNzkwMTI3MDc5LCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiZWQ2NmQ1YTY1Y2I4YTNmYTBmNjc3NzI5ZmMzNTlhNDBjYzAwNDVkMWM3MDgzYjM2YzBiYjQzMzkzM2IyODU5YiJ9.JDecurKflr0A2mbRSiZWrk8W9hT7c6v1EIx2Koe95O5AGF26cawxZ7n7XuxQhzxVOqGdc2TdJ1JOelSo57pYIIzje5-sfIn7jZKzIV--67fI_i6R7pH2Vqh3FuzqERoxcFQ8c8N1tJTA4FK2s463qFvAvUeZO25Znii0kXGzOBSFq_FSdYYKt7KyZPQFHmW5QsLvHnPcJdk77UTpCkTHTbHKEE-sWYUk2LGzWEIjLxMufdZuK2QIotKCiL4k32etUiPp1_8pcdkugG70_Uc_4nyNI6PYSnQAStRX19shFdwalBsipz2xyH1nCWWU-j5HtuToygnjoe3OfvqlnuyCmQ&redirect_url=%2F",
+        "responseMs": 823,
+        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjc0MjksIm5iZiI6MTc5MDEyNzEyOSwiaWF0IjoxNzkwMTI3MTI5LCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiMTk2NDcxMzVmODBiYTM2NDcwZmRiZTY5OTllNzA2OGZlZDM3NDI4YjIwNTcyYzhjZmE5YmNlZTFiZTIxMDk2MyJ9.EQP-bwpN6McbxNAX8ay_OqPsQSl2eC06U8UqFd93NeGmht1jVgdeXH71B81N59N-TVQKRDzB_CHNWGLlwtM3wVVOklgyREoIsbQHWedSqiE_Ce2nXKh--8BmoWXkLANFU42rBLmCip8HW6tb4YPYgp2vBVDg0NJPfWLslKoaMWF9ZA3nnQ8FJshzJZZs2-XtPYTpOoEWyWGuyn9LA4nEcVJQ3hzAeEkzQT6AlJs2-fS9p-u1j0dTOuRdIdTF4n7wrtXreILGYkZndYm1v2QmLi1SAJDhdUguHhkOn5sQGeUpSLDTUcCjh2UyVFM87KWusz6I8uCR5KYOrooOvDb4fA&redirect_url=%2F",
         "contentType": "text/html"
       },
       "headers": {
@@ -279,16 +251,6 @@
         "openGraph": false,
         "noindex": true
       },
-      "robots": {
-        "ok": true,
-        "status": 200,
-        "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev/robots.txt"
-      },
-      "sitemap": {
-        "ok": false,
-        "status": 200,
-        "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev/sitemap.xml"
-      },
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
@@ -296,55 +258,30 @@
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
-      "score": 67,
-      "issues": [
-        {
-          "check": "Indexability",
-          "severity": "high",
-          "message": "Homepage appears to be marked noindex."
-        },
-        {
-          "check": "Meta description",
-          "severity": "high",
-          "message": "Missing meta description.",
-          "weight": 10
-        },
-        {
-          "check": "Canonical",
-          "severity": "medium",
-          "message": "Missing canonical URL.",
-          "weight": 8
-        },
-        {
-          "check": "Sitemap",
-          "severity": "medium",
-          "message": "Sitemap is missing or unavailable.",
-          "weight": 8
-        },
-        {
-          "check": "HTML lang",
-          "severity": "low",
-          "message": "Missing lang attribute on the HTML element.",
-          "weight": 4
-        },
-        {
-          "check": "Open Graph",
-          "severity": "low",
-          "message": "Basic Open Graph metadata not detected.",
-          "weight": 3
-        }
-      ],
-      "health": "warning"
+      "robots": {
+        "skipped": true
+      },
+      "sitemap": {
+        "skipped": true
+      },
+      "score": 100,
+      "issues": [],
+      "health": "healthy"
     },
     {
       "id": "site-control-center",
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
-      "checkedAt": "2026-09-23T01:31:20.667Z",
+      "monitorMode": "website",
+      "checkedAt": "2026-09-23T01:32:10.004Z",
+      "availability": {
+        "ok": true,
+        "expectedStatuses": null
+      },
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 106,
+        "responseMs": 148,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -366,22 +303,22 @@
         "openGraph": false,
         "noindex": false
       },
-      "robots": {
-        "ok": false,
-        "status": 404,
-        "url": "https://rickyganiere.github.io/robots.txt"
-      },
-      "sitemap": {
-        "ok": false,
-        "status": 404,
-        "url": "https://rickyganiere.github.io/sitemap.xml"
-      },
       "ssl": {
         "ok": true,
         "expiresAt": "2026-10-31T23:38:01.000Z",
         "daysRemaining": 38,
         "issuer": "Let's Encrypt",
         "subject": "*.github.io"
+      },
+      "robots": {
+        "ok": false,
+        "status": 404,
+        "url": "https://rickyganiere.github.io/site-control-center/robots.txt"
+      },
+      "sitemap": {
+        "ok": false,
+        "status": 404,
+        "url": "https://rickyganiere.github.io/site-control-center/sitemap.xml"
       },
       "score": 63,
       "issues": [
@@ -440,6 +377,13 @@
       "online": 4,
       "avgScore": 64,
       "critical": 2
+    },
+    {
+      "at": "2026-09-23T01:32:10.345Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 86,
+      "critical": 0
     }
   ]
 }
