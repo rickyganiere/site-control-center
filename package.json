@@ -1,0 +1,12 @@
+{
+  "name": "site-control-center",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scan": "node scripts/scan.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
