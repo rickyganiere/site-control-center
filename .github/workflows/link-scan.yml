@@ -29,4 +29,5 @@ jobs:
       - name: Publish snapshot
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/publish-snapshot.mjs data/links.json "chore: update broken link snapshot"
+        run: |
+          node scripts/publish-snapshot.mjs data/links.json "chore: update broken link snapshot"
