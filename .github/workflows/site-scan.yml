@@ -35,9 +35,16 @@ jobs:
             echo "No changes"
             exit 0
           fi
+          cp data/status.json /tmp/status.json
           git config user.name "site-control-bot"
           git config user.email "site-control-bot@users.noreply.github.com"
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/status.json data/status.json
+          if git diff --quiet -- data/status.json; then
+            echo "No changes after refresh"
+            exit 0
+          fi
           git add data/status.json
           git commit -m "chore: update site health snapshot"
-          git pull --rebase origin main
-          git push
+          git push origin HEAD:main
