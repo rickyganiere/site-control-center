@@ -37,9 +37,16 @@ jobs:
             echo "No changes"
             exit 0
           fi
+          cp data/performance.json /tmp/performance.json
           git config user.name "site-control-bot"
           git config user.email "site-control-bot@users.noreply.github.com"
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/performance.json data/performance.json
+          if git diff --quiet -- data/performance.json; then
+            echo "No changes after refresh"
+            exit 0
+          fi
           git add data/performance.json
           git commit -m "chore: update performance snapshot"
-          git pull --rebase origin main
-          git push
+          git push origin HEAD:main
