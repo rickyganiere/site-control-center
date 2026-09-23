@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-09-23T01:03:28.858Z",
+  "generatedAt": "2026-09-23T01:24:11.112Z",
   "summary": {
-    "totalSites": 1,
-    "online": 1,
+    "totalSites": 5,
+    "online": 4,
     "healthy": 1,
-    "warnings": 0,
-    "critical": 0,
-    "avgScore": 96
+    "warnings": 2,
+    "critical": 2,
+    "avgScore": 64
   },
   "sites": [
     {
       "id": "advault-ai",
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
-      "checkedAt": "2026-09-23T01:03:28.299Z",
+      "checkedAt": "2026-09-23T01:24:07.398Z",
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 412,
+        "responseMs": 312,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -66,6 +66,357 @@
         }
       ],
       "health": "healthy"
+    },
+    {
+      "id": "merchant-scanner",
+      "name": "Merchant Scanner",
+      "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
+      "checkedAt": "2026-09-23T01:24:07.836Z",
+      "http": {
+        "ok": true,
+        "status": 200,
+        "responseMs": 149,
+        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
+        "contentType": "text/html; charset=utf-8"
+      },
+      "headers": {
+        "server": "cloudflare",
+        "cacheControl": "no-store",
+        "xRobotsTag": "",
+        "hsts": false,
+        "csp": true
+      },
+      "seo": {
+        "title": "Merchant Digger · Private Beta",
+        "description": "",
+        "canonical": "",
+        "h1": "Dig up high-risk merchant opportunities.",
+        "h1Count": 9,
+        "lang": "en",
+        "viewport": true,
+        "openGraph": false,
+        "noindex": false
+      },
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/robots.txt"
+      },
+      "sitemap": {
+        "ok": false,
+        "status": 200,
+        "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/sitemap.xml"
+      },
+      "ssl": {
+        "ok": true,
+        "expiresAt": "2026-12-10T17:14:48.000Z",
+        "daysRemaining": 78,
+        "issuer": "Let's Encrypt",
+        "subject": "riccardoganiere.workers.dev"
+      },
+      "score": 57,
+      "issues": [
+        {
+          "check": "Meta description",
+          "severity": "high",
+          "message": "Missing meta description.",
+          "weight": 10
+        },
+        {
+          "check": "Single H1",
+          "severity": "medium",
+          "message": "Expected 1 H1, found 9.",
+          "weight": 10
+        },
+        {
+          "check": "Canonical",
+          "severity": "medium",
+          "message": "Missing canonical URL.",
+          "weight": 8
+        },
+        {
+          "check": "Sitemap",
+          "severity": "medium",
+          "message": "Sitemap is missing or unavailable.",
+          "weight": 8
+        },
+        {
+          "check": "HSTS",
+          "severity": "low",
+          "message": "Strict-Transport-Security header not detected.",
+          "weight": 4
+        },
+        {
+          "check": "Open Graph",
+          "severity": "low",
+          "message": "Basic Open Graph metadata not detected.",
+          "weight": 3
+        }
+      ],
+      "health": "critical"
+    },
+    {
+      "id": "affiliate-discovery",
+      "name": "Affiliate Discovery",
+      "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
+      "checkedAt": "2026-09-23T01:24:08.096Z",
+      "http": {
+        "ok": true,
+        "status": 401,
+        "responseMs": 1032,
+        "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
+        "contentType": "text/html; charset=utf-8"
+      },
+      "headers": {
+        "server": "cloudflare",
+        "cacheControl": "no-store",
+        "xRobotsTag": "",
+        "hsts": false,
+        "csp": false
+      },
+      "seo": {
+        "title": "Sign in required",
+        "description": "",
+        "canonical": "",
+        "h1": "You’re almost in",
+        "h1Count": 1,
+        "lang": "en-US",
+        "viewport": true,
+        "openGraph": false,
+        "noindex": false
+      },
+      "robots": {
+        "ok": false,
+        "status": 401,
+        "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/robots.txt"
+      },
+      "sitemap": {
+        "ok": false,
+        "status": 401,
+        "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/sitemap.xml"
+      },
+      "ssl": {
+        "ok": true,
+        "expiresAt": "2026-12-18T19:33:53.000Z",
+        "daysRemaining": 86,
+        "issuer": "Google Trust Services",
+        "subject": "*.dating-netwo-1613.chatgpt.site"
+      },
+      "score": 39,
+      "issues": [
+        {
+          "check": "HTTP 2xx",
+          "severity": "critical",
+          "message": "Homepage is not returning a successful HTTP status.",
+          "weight": 20
+        },
+        {
+          "check": "Meta description",
+          "severity": "high",
+          "message": "Missing meta description.",
+          "weight": 10
+        },
+        {
+          "check": "Canonical",
+          "severity": "medium",
+          "message": "Missing canonical URL.",
+          "weight": 8
+        },
+        {
+          "check": "robots.txt",
+          "severity": "medium",
+          "message": "robots.txt is missing or unavailable.",
+          "weight": 8
+        },
+        {
+          "check": "Sitemap",
+          "severity": "medium",
+          "message": "Sitemap is missing or unavailable.",
+          "weight": 8
+        },
+        {
+          "check": "HSTS",
+          "severity": "low",
+          "message": "Strict-Transport-Security header not detected.",
+          "weight": 4
+        },
+        {
+          "check": "Open Graph",
+          "severity": "low",
+          "message": "Basic Open Graph metadata not detected.",
+          "weight": 3
+        }
+      ],
+      "health": "critical"
+    },
+    {
+      "id": "dcb-expansion-radar",
+      "name": "DCB Expansion Radar",
+      "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
+      "checkedAt": "2026-09-23T01:24:09.756Z",
+      "http": {
+        "ok": true,
+        "status": 200,
+        "responseMs": 833,
+        "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev?kid=00c78a96ee0842c33c70b13d750147a9b28634061ee96ec1146c7dd2e409f274&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6IjAwYzc4YTk2ZWUwODQyYzMzYzcwYjEzZDc1MDE0N2E5YjI4NjM0MDYxZWU5NmVjMTE0NmM3ZGQyZTQwOWYyNzQiLCJob3N0bmFtZSI6ImRjYi1leHBhbnNpb24tcmFkYXIucmljY2FyZG9nYW5pZXJlLndvcmtlcnMuZGV2IiwicmVkaXJlY3RfdXJsIjoiLyIsInNlcnZpY2VfdG9rZW5fc3RhdHVzIjpmYWxzZSwiaXNfd2FycCI6ZmFsc2UsImlzX2dhdGV3YXkiOmZhbHNlLCJleHAiOjE3OTAxMjY5NDksIm5iZiI6MTc5MDEyNjY0OSwiaWF0IjoxNzkwMTI2NjQ5LCJhdXRoX3N0YXR1cyI6Ik5PTkUiLCJtdGxzX2F1dGgiOnsiY2VydF9pc3N1ZXJfZG4iOiIiLCJjZXJ0X3NlcmlhbCI6IiIsImNlcnRfaXNzdWVyX3NraSI6IiIsImNlcnRfcHJlc2VudGVkIjpmYWxzZSwiY29tbW9uX25hbWUiOiIiLCJhdXRoX3N0YXR1cyI6Ik5PTkUifSwicmVhbF9jb3VudHJ5IjoiVVMiLCJhcHBfc2Vzc2lvbl9oYXNoIjoiYTVjNTJmYTcyZDkwNTg5ZGIwZjg1YWQyZGQ4MzM2Y2IzN2IxNTExNmJlYTI0ZWUzNDJmMWU3MTE0N2Y3YjI2ZiJ9.JlIQ9JjVoWNS3y_w5ax8IIScTXw6Mm1gACGwliz8rOjt0SBSVqrXczioXqSS450uJZjf95t9BDmepktHwTs_vHdgpjd71B2GfkXWdqR8R_Q4V0zGrNR1Df_HRhrUa7_ZWOpiYHh4Jd2GLDGVcwKhAEhGZ8OMAchnPsFu56feoUurULnId4BuftN3ff7Tb76aTvcI5SD_TYv82pWhUbxtMjmbG6rRX2Cj2yvhXDq0bTtKuMH86-2tMiUne0yUv9U9P1CHDNW3SiOXX3grDrz4Gf5vXcd_aq94jUDnmbfhBEMFHpDvq0fDQWHcUSggAku-8WUv007x1K9XC6lHqMffmg&redirect_url=%2F",
+        "contentType": "text/html"
+      },
+      "headers": {
+        "server": "cloudflare",
+        "cacheControl": "",
+        "xRobotsTag": "",
+        "hsts": true,
+        "csp": true
+      },
+      "seo": {
+        "title": "Sign in ・ Cloudflare Access",
+        "description": "",
+        "canonical": "",
+        "h1": "Log in to dcb-expansion-radar - Cloudflare Workers",
+        "h1Count": 1,
+        "lang": "",
+        "viewport": true,
+        "openGraph": false,
+        "noindex": true
+      },
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev/robots.txt"
+      },
+      "sitemap": {
+        "ok": false,
+        "status": 200,
+        "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev/sitemap.xml"
+      },
+      "ssl": {
+        "ok": true,
+        "expiresAt": "2026-12-10T17:14:48.000Z",
+        "daysRemaining": 78,
+        "issuer": "Let's Encrypt",
+        "subject": "riccardoganiere.workers.dev"
+      },
+      "score": 67,
+      "issues": [
+        {
+          "check": "Indexability",
+          "severity": "high",
+          "message": "Homepage appears to be marked noindex."
+        },
+        {
+          "check": "Meta description",
+          "severity": "high",
+          "message": "Missing meta description.",
+          "weight": 10
+        },
+        {
+          "check": "Canonical",
+          "severity": "medium",
+          "message": "Missing canonical URL.",
+          "weight": 8
+        },
+        {
+          "check": "Sitemap",
+          "severity": "medium",
+          "message": "Sitemap is missing or unavailable.",
+          "weight": 8
+        },
+        {
+          "check": "HTML lang",
+          "severity": "low",
+          "message": "Missing lang attribute on the HTML element.",
+          "weight": 4
+        },
+        {
+          "check": "Open Graph",
+          "severity": "low",
+          "message": "Basic Open Graph metadata not detected.",
+          "weight": 3
+        }
+      ],
+      "health": "warning"
+    },
+    {
+      "id": "site-control-center",
+      "name": "Site Control Center",
+      "url": "https://rickyganiere.github.io/site-control-center/",
+      "checkedAt": "2026-09-23T01:24:10.784Z",
+      "http": {
+        "ok": true,
+        "status": 200,
+        "responseMs": 151,
+        "finalUrl": "https://rickyganiere.github.io/site-control-center/",
+        "contentType": "text/html; charset=utf-8"
+      },
+      "headers": {
+        "server": "GitHub.com",
+        "cacheControl": "max-age=600",
+        "xRobotsTag": "",
+        "hsts": true,
+        "csp": false
+      },
+      "seo": {
+        "title": "Site Control Center",
+        "description": "",
+        "canonical": "",
+        "h1": "Site Control Center",
+        "h1Count": 1,
+        "lang": "en",
+        "viewport": true,
+        "openGraph": false,
+        "noindex": false
+      },
+      "robots": {
+        "ok": false,
+        "status": 404,
+        "url": "https://rickyganiere.github.io/robots.txt"
+      },
+      "sitemap": {
+        "ok": false,
+        "status": 404,
+        "url": "https://rickyganiere.github.io/sitemap.xml"
+      },
+      "ssl": {
+        "ok": true,
+        "expiresAt": "2026-10-31T23:38:01.000Z",
+        "daysRemaining": 38,
+        "issuer": "Let's Encrypt",
+        "subject": "*.github.io"
+      },
+      "score": 63,
+      "issues": [
+        {
+          "check": "Meta description",
+          "severity": "high",
+          "message": "Missing meta description.",
+          "weight": 10
+        },
+        {
+          "check": "Canonical",
+          "severity": "medium",
+          "message": "Missing canonical URL.",
+          "weight": 8
+        },
+        {
+          "check": "robots.txt",
+          "severity": "medium",
+          "message": "robots.txt is missing or unavailable.",
+          "weight": 8
+        },
+        {
+          "check": "Sitemap",
+          "severity": "medium",
+          "message": "Sitemap is missing or unavailable.",
+          "weight": 8
+        },
+        {
+          "check": "Open Graph",
+          "severity": "low",
+          "message": "Basic Open Graph metadata not detected.",
+          "weight": 3
+        }
+      ],
+      "health": "warning"
     }
   ],
   "history": [
@@ -75,6 +426,13 @@
       "online": 1,
       "avgScore": 96,
       "critical": 0
+    },
+    {
+      "at": "2026-09-23T01:24:11.112Z",
+      "totalSites": 5,
+      "online": 4,
+      "avgScore": 64,
+      "critical": 2
     }
   ]
 }
