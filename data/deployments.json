@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-23T01:43:31.955Z",
+  "generatedAt": "2026-09-23T01:45:27.823Z",
   "summary": {
-    "tracked": 2,
+    "tracked": 4,
     "visible": 2,
     "successful": 1,
     "failing": 0,
@@ -9,6 +9,24 @@
     "stale": 0
   },
   "sites": [
+    {
+      "id": "advault-ai",
+      "kind": "CI",
+      "available": false,
+      "private": true,
+      "note": "Live app monitoring is active. Private repository metadata is intentionally not published.",
+      "latest": null,
+      "stale": false
+    },
+    {
+      "id": "merchant-scanner",
+      "kind": "Deploy",
+      "available": false,
+      "private": true,
+      "note": "Live app monitoring is active. Private repository metadata is intentionally not published.",
+      "latest": null,
+      "stale": false
+    },
     {
       "id": "dcb-expansion-radar",
       "repo": "rickyganiere/dcb-expansion-radar",
@@ -40,17 +58,17 @@
       "private": false,
       "stale": false,
       "latest": {
-        "id": 35807457186,
+        "id": 35807595572,
         "name": "Deploy dashboard",
-        "status": "in_progress",
+        "status": "queued",
         "conclusion": null,
         "event": "push",
         "branch": "main",
-        "sha": "43c02d3462bb0dc32b3b827bf402fb585b4d088b",
-        "title": "privacy: remove private repository metadata from public config",
-        "createdAt": "2026-09-23T01:43:20Z",
-        "updatedAt": "2026-09-23T01:43:24Z",
-        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807457186"
+        "sha": "70007cb7ef4cdca3be414669f5263ef443fc9be4",
+        "title": "ci: isolate monitor concurrency groups",
+        "createdAt": "2026-09-23T01:45:20Z",
+        "updatedAt": "2026-09-23T01:45:25Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/35807595572"
       }
     }
   ],
@@ -87,6 +105,12 @@
     },
     {
       "at": "2026-09-23T01:43:31.955Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
+    },
+    {
+      "at": "2026-09-23T01:45:27.823Z",
       "successful": 1,
       "failing": 0,
       "running": 1
