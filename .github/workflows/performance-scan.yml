@@ -14,6 +14,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: performance-scan
+  cancel-in-progress: true
+
 jobs:
   performance:
     runs-on: ubuntu-latest
