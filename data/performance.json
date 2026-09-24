@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-23T04:55:06.844Z",
+  "generatedAt": "2026-09-24T04:56:19.138Z",
   "summary": {
     "monitoredSites": 3,
-    "mobileAvg": 87,
-    "desktopAvg": 94,
+    "mobileAvg": 97,
+    "desktopAvg": 99,
     "errors": 0,
     "lighthouseRuns": 6,
     "fieldDataAvailable": 0
@@ -16,21 +16,21 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-23T04:54:09.087Z",
+        "fetchedAt": "2026-09-24T04:53:54.162Z",
         "finalUrl": "https://advault-ai.com/",
         "scores": {
-          "performance": 63,
+          "performance": 92,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
         },
         "lab": {
-          "fcpMs": 2304,
-          "lcpMs": 2482,
-          "tbtMs": 682,
-          "cls": 0.294,
-          "speedIndexMs": 2304,
-          "interactiveMs": 4962
+          "fcpMs": 1824,
+          "lcpMs": 2048,
+          "tbtMs": 274,
+          "cls": 0,
+          "speedIndexMs": 1824,
+          "interactiveMs": 3477
         },
         "field": {
           "available": false
@@ -39,10 +39,10 @@
           {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
-            "displayValue": "Est savings of 120 KiB",
-            "score": 0,
-            "savingsMs": 340,
-            "savingsBytes": 122647
+            "displayValue": "Est savings of 79 KiB",
+            "score": 50,
+            "savingsMs": 0,
+            "savingsBytes": 80712
           }
         ],
         "psiSkipped": true
@@ -50,21 +50,21 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-23T04:54:21.602Z",
+        "fetchedAt": "2026-09-24T04:54:06.060Z",
         "finalUrl": "https://advault-ai.com/",
         "scores": {
-          "performance": 83,
+          "performance": 100,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
         },
         "lab": {
-          "fcpMs": 583,
-          "lcpMs": 848,
+          "fcpMs": 445,
+          "lcpMs": 767,
           "tbtMs": 0,
-          "cls": 0.329,
-          "speedIndexMs": 583,
-          "interactiveMs": 848
+          "cls": 0,
+          "speedIndexMs": 445,
+          "interactiveMs": 767
         },
         "field": {
           "available": false
@@ -73,18 +73,18 @@
           {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
-            "displayValue": "Est savings of 120 KiB",
+            "displayValue": "Est savings of 78 KiB",
             "score": 0,
-            "savingsMs": 0,
-            "savingsBytes": 122631
+            "savingsMs": 80,
+            "savingsBytes": 80206
           },
           {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
-            "displayValue": "Est savings of 10 KiB",
+            "displayValue": "Est savings of 11 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 10391
+            "savingsBytes": 11375
           }
         ],
         "psiSkipped": true
@@ -97,51 +97,69 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-23T04:54:32.932Z",
+        "fetchedAt": "2026-09-24T04:55:01.174Z",
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "scores": {
-          "performance": 97,
-          "accessibility": 94,
+          "performance": 100,
+          "accessibility": 100,
           "bestPractices": 96,
           "seo": 82
         },
         "lab": {
-          "fcpMs": 1061,
-          "lcpMs": 1212,
-          "tbtMs": 197,
-          "cls": 0,
-          "speedIndexMs": 1061,
-          "interactiveMs": 1308
+          "fcpMs": 1046,
+          "lcpMs": 1710,
+          "tbtMs": 47,
+          "cls": 0.022,
+          "speedIndexMs": 1308,
+          "interactiveMs": 1710
         },
         "field": {
           "available": false
         },
-        "recommendations": [],
+        "recommendations": [
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "displayValue": "Est savings of 12 KiB",
+            "score": 50,
+            "savingsMs": 0,
+            "savingsBytes": 12423
+          }
+        ],
         "psiSkipped": true
       },
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-23T04:54:44.251Z",
+        "fetchedAt": "2026-09-24T04:55:56.282Z",
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "scores": {
           "performance": 100,
-          "accessibility": 94,
+          "accessibility": 96,
           "bestPractices": 96,
           "seo": 82
         },
         "lab": {
-          "fcpMs": 311,
-          "lcpMs": 311,
+          "fcpMs": 300,
+          "lcpMs": 500,
           "tbtMs": 0,
-          "cls": 0,
-          "speedIndexMs": 311,
-          "interactiveMs": 311
+          "cls": 0.005,
+          "speedIndexMs": 434,
+          "interactiveMs": 500
         },
         "field": {
           "available": false
         },
-        "recommendations": [],
+        "recommendations": [
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "displayValue": "Est savings of 13 KiB",
+            "score": 50,
+            "savingsMs": 0,
+            "savingsBytes": 13164
+          }
+        ],
         "psiSkipped": true
       }
     },
@@ -152,7 +170,7 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-23T04:54:55.628Z",
+        "fetchedAt": "2026-09-24T04:56:07.796Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 100,
@@ -161,12 +179,12 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 883,
-          "lcpMs": 967,
+          "fcpMs": 854,
+          "lcpMs": 969,
           "tbtMs": 0,
           "cls": 0.032,
-          "speedIndexMs": 883,
-          "interactiveMs": 967
+          "speedIndexMs": 854,
+          "interactiveMs": 969
         },
         "field": {
           "available": false
@@ -177,7 +195,7 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-23T04:55:06.844Z",
+        "fetchedAt": "2026-09-24T04:56:19.133Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 98,
@@ -186,11 +204,11 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 214,
+          "fcpMs": 215,
           "lcpMs": 244,
           "tbtMs": 0,
           "cls": 0.096,
-          "speedIndexMs": 214,
+          "speedIndexMs": 215,
           "interactiveMs": 244
         },
         "field": {
@@ -226,6 +244,11 @@
       "at": "2026-09-23T04:55:06.844Z",
       "mobileAvg": 87,
       "desktopAvg": 94
+    },
+    {
+      "at": "2026-09-24T04:56:19.138Z",
+      "mobileAvg": 97,
+      "desktopAvg": 99
     }
   ]
 }
