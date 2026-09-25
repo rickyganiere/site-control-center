@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T04:56:19.138Z",
+  "generatedAt": "2026-09-25T04:56:55.110Z",
   "summary": {
     "monitoredSites": 3,
     "mobileAvg": 97,
@@ -16,21 +16,21 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-24T04:53:54.162Z",
+        "fetchedAt": "2026-09-25T04:54:31.870Z",
         "finalUrl": "https://advault-ai.com/",
         "scores": {
-          "performance": 92,
+          "performance": 90,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
         },
         "lab": {
-          "fcpMs": 1824,
-          "lcpMs": 2048,
-          "tbtMs": 274,
+          "fcpMs": 1747,
+          "lcpMs": 1909,
+          "tbtMs": 351,
           "cls": 0,
-          "speedIndexMs": 1824,
-          "interactiveMs": 3477
+          "speedIndexMs": 2780,
+          "interactiveMs": 3148
         },
         "field": {
           "available": false
@@ -42,7 +42,7 @@
             "displayValue": "Est savings of 79 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 80712
+            "savingsBytes": 80659
           }
         ],
         "psiSkipped": true
@@ -50,21 +50,21 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-24T04:54:06.060Z",
+        "fetchedAt": "2026-09-25T04:54:43.528Z",
         "finalUrl": "https://advault-ai.com/",
         "scores": {
-          "performance": 100,
+          "performance": 99,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
         },
         "lab": {
-          "fcpMs": 445,
-          "lcpMs": 767,
+          "fcpMs": 514,
+          "lcpMs": 853,
           "tbtMs": 0,
           "cls": 0,
-          "speedIndexMs": 445,
-          "interactiveMs": 767
+          "speedIndexMs": 514,
+          "interactiveMs": 853
         },
         "field": {
           "available": false
@@ -75,8 +75,8 @@
             "title": "Reduce unused JavaScript",
             "displayValue": "Est savings of 78 KiB",
             "score": 0,
-            "savingsMs": 80,
-            "savingsBytes": 80206
+            "savingsMs": 40,
+            "savingsBytes": 80216
           },
           {
             "id": "unused-css-rules",
@@ -84,7 +84,7 @@
             "displayValue": "Est savings of 11 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 11375
+            "savingsBytes": 11376
           }
         ],
         "psiSkipped": true
@@ -97,7 +97,7 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-24T04:55:01.174Z",
+        "fetchedAt": "2026-09-25T04:55:38.191Z",
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "scores": {
           "performance": 100,
@@ -106,12 +106,12 @@
           "seo": 82
         },
         "lab": {
-          "fcpMs": 1046,
-          "lcpMs": 1710,
-          "tbtMs": 47,
+          "fcpMs": 1062,
+          "lcpMs": 1226,
+          "tbtMs": 0,
           "cls": 0.022,
-          "speedIndexMs": 1308,
-          "interactiveMs": 1710
+          "speedIndexMs": 1448,
+          "interactiveMs": 1226
         },
         "field": {
           "available": false
@@ -123,7 +123,7 @@
             "displayValue": "Est savings of 12 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 12423
+            "savingsBytes": 12411
           }
         ],
         "psiSkipped": true
@@ -131,7 +131,7 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-24T04:55:56.282Z",
+        "fetchedAt": "2026-09-25T04:56:32.951Z",
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "scores": {
           "performance": 100,
@@ -140,12 +140,12 @@
           "seo": 82
         },
         "lab": {
-          "fcpMs": 300,
-          "lcpMs": 500,
+          "fcpMs": 268,
+          "lcpMs": 440,
           "tbtMs": 0,
           "cls": 0.005,
           "speedIndexMs": 434,
-          "interactiveMs": 500
+          "interactiveMs": 440
         },
         "field": {
           "available": false
@@ -157,7 +157,7 @@
             "displayValue": "Est savings of 13 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 13164
+            "savingsBytes": 13146
           }
         ],
         "psiSkipped": true
@@ -170,7 +170,7 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-24T04:56:07.796Z",
+        "fetchedAt": "2026-09-25T04:56:44.228Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 100,
@@ -179,12 +179,12 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 854,
-          "lcpMs": 969,
+          "fcpMs": 910,
+          "lcpMs": 1036,
           "tbtMs": 0,
           "cls": 0.032,
-          "speedIndexMs": 854,
-          "interactiveMs": 969
+          "speedIndexMs": 910,
+          "interactiveMs": 1036
         },
         "field": {
           "available": false
@@ -195,7 +195,7 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-09-24T04:56:19.133Z",
+        "fetchedAt": "2026-09-25T04:56:55.106Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 98,
@@ -204,11 +204,11 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 215,
+          "fcpMs": 213,
           "lcpMs": 244,
           "tbtMs": 0,
           "cls": 0.096,
-          "speedIndexMs": 215,
+          "speedIndexMs": 213,
           "interactiveMs": 244
         },
         "field": {
@@ -247,6 +247,11 @@
     },
     {
       "at": "2026-09-24T04:56:19.138Z",
+      "mobileAvg": 97,
+      "desktopAvg": 99
+    },
+    {
+      "at": "2026-09-25T04:56:55.110Z",
       "mobileAvg": 97,
       "desktopAvg": 99
     }
