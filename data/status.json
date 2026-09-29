@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-29T12:37:22.863Z",
+  "generatedAt": "2026-09-29T18:34:52.578Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
     "healthy": 4,
     "warnings": 1,
     "critical": 0,
-    "avgScore": 91
+    "avgScore": 93
   },
   "sites": [
     {
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-09-29T12:37:19.769Z",
+      "checkedAt": "2026-09-29T18:34:49.049Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 508,
+        "responseMs": 582,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -37,8 +37,8 @@
         "title": "AdVault — Campaign Intelligence &amp; Ad Research Platform",
         "description": "Scan campaign URLs, verify tracking, research competitor ads and turn campaign evidence into your next media buying test.",
         "canonical": "https://advault-ai.com/",
-        "h1": "",
-        "h1Count": 0,
+        "h1": "Scan the funnel. See the signal. Build the next test.",
+        "h1Count": 1,
         "lang": "en",
         "viewport": true,
         "openGraph": true,
@@ -61,14 +61,8 @@
         "status": 200,
         "url": "https://advault-ai.com/sitemap.xml"
       },
-      "score": 86,
+      "score": 96,
       "issues": [
-        {
-          "check": "Single H1",
-          "severity": "medium",
-          "message": "Missing H1.",
-          "weight": 10
-        },
         {
           "check": "HSTS",
           "severity": "low",
@@ -87,7 +81,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-09-29T12:37:20.433Z",
+      "checkedAt": "2026-09-29T18:34:49.789Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -95,7 +89,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 62,
+        "responseMs": 218,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -120,7 +114,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
-        "daysRemaining": 72,
+        "daysRemaining": 71,
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
@@ -162,7 +156,7 @@
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-09-29T12:37:20.517Z",
+      "checkedAt": "2026-09-29T18:34:50.050Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -174,7 +168,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 1115,
+        "responseMs": 1050,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -231,7 +225,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-09-29T12:37:21.647Z",
+      "checkedAt": "2026-09-29T18:34:51.132Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -243,7 +237,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 712,
+        "responseMs": 866,
         "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev",
         "contentType": "text/html"
       },
@@ -268,7 +262,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
-        "daysRemaining": 72,
+        "daysRemaining": 71,
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
@@ -287,7 +281,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-09-29T12:37:22.383Z",
+      "checkedAt": "2026-09-29T18:34:52.143Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -295,7 +289,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 256,
+        "responseMs": 172,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -608,6 +602,13 @@
       "totalSites": 5,
       "online": 5,
       "avgScore": 91,
+      "critical": 0
+    },
+    {
+      "at": "2026-09-29T18:34:52.578Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 93,
       "critical": 0
     }
   ]
