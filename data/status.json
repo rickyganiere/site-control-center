@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-02T12:37:05.953Z",
+  "generatedAt": "2026-10-02T18:34:54.049Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
-    "healthy": 4,
-    "warnings": 1,
+    "healthy": 3,
+    "warnings": 2,
     "critical": 0,
     "avgScore": 93
   },
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-10-02T12:37:02.904Z",
+      "checkedAt": "2026-10-02T18:34:50.970Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 352,
+        "responseMs": 316,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -81,7 +81,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-10-02T12:37:03.358Z",
+      "checkedAt": "2026-10-02T18:34:51.396Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -89,32 +89,32 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 120,
-        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
+        "responseMs": 169,
+        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "contentType": "text/html; charset=utf-8"
       },
       "headers": {
         "server": "cloudflare",
         "cacheControl": "no-store",
-        "xRobotsTag": "",
+        "xRobotsTag": "noindex, nofollow",
         "hsts": false,
         "csp": true
       },
       "seo": {
-        "title": "Merchant Scanner · Private Beta",
+        "title": "Team login | NextGen Payment",
         "description": "",
         "canonical": "",
-        "h1": "Overview",
-        "h1Count": 9,
+        "h1": "Team login",
+        "h1Count": 1,
         "lang": "en",
         "viewport": true,
         "openGraph": false,
-        "noindex": false
+        "noindex": true
       },
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
-        "daysRemaining": 69,
+        "daysRemaining": 68,
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
@@ -126,6 +126,11 @@
       },
       "score": 90,
       "issues": [
+        {
+          "check": "Brand title",
+          "severity": "medium",
+          "message": "Page title does not contain expected brand \"Merchant Scanner\". Current title: \"Team login | NextGen Payment\"."
+        },
         {
           "check": "HSTS",
           "severity": "low",
@@ -147,16 +152,16 @@
       ],
       "brand": {
         "expectedTitleContains": "Merchant Scanner",
-        "ok": true
+        "ok": false
       },
-      "health": "healthy"
+      "health": "warning"
     },
     {
       "id": "affiliate-discovery",
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-02T12:37:03.518Z",
+      "checkedAt": "2026-10-02T18:34:51.586Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -168,7 +173,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 1330,
+        "responseMs": 1570,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -225,7 +230,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-02T12:37:04.877Z",
+      "checkedAt": "2026-10-02T18:34:53.181Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -237,7 +242,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 619,
+        "responseMs": 644,
         "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev",
         "contentType": "text/html"
       },
@@ -262,7 +267,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
-        "daysRemaining": 69,
+        "daysRemaining": 68,
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
@@ -281,7 +286,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-10-02T12:37:05.533Z",
+      "checkedAt": "2026-10-02T18:34:53.848Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -289,7 +294,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 184,
+        "responseMs": 82,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -683,6 +688,13 @@
     },
     {
       "at": "2026-10-02T12:37:05.953Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 93,
+      "critical": 0
+    },
+    {
+      "at": "2026-10-02T18:34:54.049Z",
       "totalSites": 5,
       "online": 5,
       "avgScore": 93,
