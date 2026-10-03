@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-02T04:59:02.648Z",
+  "generatedAt": "2026-10-03T04:56:10.856Z",
   "summary": {
     "monitoredSites": 3,
-    "mobileAvg": 96,
+    "mobileAvg": 100,
     "desktopAvg": 99,
-    "errors": 0,
-    "lighthouseRuns": 6,
+    "errors": 2,
+    "lighthouseRuns": 4,
     "fieldDataAvailable": 0
   },
   "sites": [
@@ -15,78 +15,14 @@
       "url": "https://advault-ai.com",
       "mobile": {
         "strategy": "mobile",
-        "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-02T04:56:37.114Z",
-        "finalUrl": "https://advault-ai.com/",
-        "scores": {
-          "performance": 87,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "lab": {
-          "fcpMs": 1719,
-          "lcpMs": 2146,
-          "tbtMs": 426,
-          "cls": 0,
-          "speedIndexMs": 1719,
-          "interactiveMs": 3462
-        },
-        "field": {
-          "available": false
-        },
-        "recommendations": [
-          {
-            "id": "unused-javascript",
-            "title": "Reduce unused JavaScript",
-            "displayValue": "Est savings of 77 KiB",
-            "score": 50,
-            "savingsMs": 0,
-            "savingsBytes": 79054
-          },
-          {
-            "id": "unused-css-rules",
-            "title": "Reduce unused CSS",
-            "displayValue": "Est savings of 10 KiB",
-            "score": 50,
-            "savingsMs": 0,
-            "savingsBytes": 10418
-          }
-        ],
+        "fetchedAt": "2026-10-03T04:55:22.376Z",
+        "error": "Runtime error encountered: Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404)",
         "psiSkipped": true
       },
       "desktop": {
         "strategy": "desktop",
-        "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-02T04:56:48.937Z",
-        "finalUrl": "https://advault-ai.com/",
-        "scores": {
-          "performance": 100,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "lab": {
-          "fcpMs": 435,
-          "lcpMs": 531,
-          "tbtMs": 0,
-          "cls": 0,
-          "speedIndexMs": 435,
-          "interactiveMs": 531
-        },
-        "field": {
-          "available": false
-        },
-        "recommendations": [
-          {
-            "id": "unused-css-rules",
-            "title": "Reduce unused CSS",
-            "displayValue": "Est savings of 11 KiB",
-            "score": 50,
-            "savingsMs": 0,
-            "savingsBytes": 11171
-          }
-        ],
+        "fetchedAt": "2026-10-03T04:55:27.929Z",
+        "error": "Runtime error encountered: Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404)",
         "psiSkipped": true
       }
     },
@@ -97,21 +33,21 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-02T04:57:44.144Z",
-        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
+        "fetchedAt": "2026-10-03T04:55:38.816Z",
+        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "scores": {
           "performance": 100,
-          "accessibility": 89,
-          "bestPractices": 96,
-          "seo": 82
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 45
         },
         "lab": {
-          "fcpMs": 1082,
-          "lcpMs": 1710,
-          "tbtMs": 13,
+          "fcpMs": 979,
+          "lcpMs": 979,
+          "tbtMs": 0,
           "cls": 0,
-          "speedIndexMs": 1082,
-          "interactiveMs": 1710
+          "speedIndexMs": 979,
+          "interactiveMs": 1020
         },
         "field": {
           "available": false
@@ -122,21 +58,21 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-02T04:58:39.423Z",
-        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/",
+        "fetchedAt": "2026-10-03T04:55:49.323Z",
+        "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "scores": {
           "performance": 100,
-          "accessibility": 90,
-          "bestPractices": 96,
-          "seo": 82
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 45
         },
         "lab": {
-          "fcpMs": 304,
-          "lcpMs": 460,
+          "fcpMs": 305,
+          "lcpMs": 380,
           "tbtMs": 0,
-          "cls": 0.003,
-          "speedIndexMs": 416,
-          "interactiveMs": 460
+          "cls": 0,
+          "speedIndexMs": 305,
+          "interactiveMs": 380
         },
         "field": {
           "available": false
@@ -152,7 +88,7 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-02T04:58:51.094Z",
+        "fetchedAt": "2026-10-03T04:56:00.186Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 100,
@@ -161,12 +97,12 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 832,
-          "lcpMs": 946,
+          "fcpMs": 848,
+          "lcpMs": 967,
           "tbtMs": 0,
           "cls": 0.032,
-          "speedIndexMs": 832,
-          "interactiveMs": 946
+          "speedIndexMs": 848,
+          "interactiveMs": 967
         },
         "field": {
           "available": false
@@ -177,21 +113,21 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-02T04:59:02.648Z",
+        "fetchedAt": "2026-10-03T04:56:10.854Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
-          "performance": 98,
+          "performance": 97,
           "accessibility": 100,
           "bestPractices": 96,
           "seo": 100
         },
         "lab": {
-          "fcpMs": 218,
-          "lcpMs": 246,
+          "fcpMs": 253,
+          "lcpMs": 287,
           "tbtMs": 0,
-          "cls": 0.096,
-          "speedIndexMs": 218,
-          "interactiveMs": 246
+          "cls": 0.107,
+          "speedIndexMs": 253,
+          "interactiveMs": 287
         },
         "field": {
           "available": false
@@ -270,6 +206,11 @@
     {
       "at": "2026-10-02T04:59:02.648Z",
       "mobileAvg": 96,
+      "desktopAvg": 99
+    },
+    {
+      "at": "2026-10-03T04:56:10.856Z",
+      "mobileAvg": 100,
       "desktopAvg": 99
     }
   ]
