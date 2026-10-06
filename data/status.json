@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T00:41:45.148Z",
+  "generatedAt": "2026-10-06T06:38:03.545Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-10-06T00:41:42.567Z",
+      "checkedAt": "2026-10-06T06:38:00.686Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 384,
+        "responseMs": 383,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -47,7 +47,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-21T04:08:41.000Z",
-        "daysRemaining": 76,
+        "daysRemaining": 75,
         "issuer": "Google Trust Services",
         "subject": "advault-ai.com"
       },
@@ -81,7 +81,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-10-06T00:41:43.026Z",
+      "checkedAt": "2026-10-06T06:38:01.210Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -89,7 +89,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 193,
+        "responseMs": 235,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "contentType": "text/html; charset=utf-8"
       },
@@ -161,7 +161,7 @@
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-06T00:41:43.236Z",
+      "checkedAt": "2026-10-06T06:38:01.473Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -173,7 +173,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 818,
+        "responseMs": 788,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -230,7 +230,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-06T00:41:44.069Z",
+      "checkedAt": "2026-10-06T06:38:02.285Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -242,7 +242,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 708,
+        "responseMs": 846,
         "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev",
         "contentType": "text/html"
       },
@@ -286,7 +286,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-10-06T00:41:44.793Z",
+      "checkedAt": "2026-10-06T06:38:03.161Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -294,7 +294,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 127,
+        "responseMs": 144,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -343,13 +343,6 @@
     }
   ],
   "history": [
-    {
-      "at": "2026-09-23T01:32:10.345Z",
-      "totalSites": 5,
-      "online": 5,
-      "avgScore": 86,
-      "critical": 0
-    },
     {
       "at": "2026-09-23T01:34:02.458Z",
       "totalSites": 5,
@@ -758,6 +751,13 @@
     },
     {
       "at": "2026-10-06T00:41:45.148Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 93,
+      "critical": 0
+    },
+    {
+      "at": "2026-10-06T06:38:03.545Z",
       "totalSites": 5,
       "online": 5,
       "avgScore": 93,
