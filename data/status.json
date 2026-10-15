@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-15T17:03:08.268Z",
+  "generatedAt": "2026-10-15T21:24:59.935Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
     "healthy": 3,
     "warnings": 2,
     "critical": 0,
-    "avgScore": 93
+    "avgScore": 94
   },
   "sites": [
     {
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-10-15T17:03:04.761Z",
+      "checkedAt": "2026-10-15T21:24:56.908Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 305,
+        "responseMs": 415,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -30,7 +30,7 @@
         "server": "cloudflare",
         "cacheControl": "public, max-age=0, must-revalidate",
         "xRobotsTag": "",
-        "hsts": false,
+        "hsts": true,
         "csp": false
       },
       "seo": {
@@ -61,15 +61,8 @@
         "status": 200,
         "url": "https://advault-ai.com/sitemap.xml"
       },
-      "score": 96,
-      "issues": [
-        {
-          "check": "HSTS",
-          "severity": "low",
-          "message": "Strict-Transport-Security header not detected.",
-          "weight": 4
-        }
-      ],
+      "score": 100,
+      "issues": [],
       "brand": {
         "expectedTitleContains": "AdVault",
         "ok": true
@@ -81,7 +74,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-10-15T17:03:05.521Z",
+      "checkedAt": "2026-10-15T21:24:57.566Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -89,7 +82,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 831,
+        "responseMs": 283,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "contentType": "text/html; charset=utf-8"
       },
@@ -114,7 +107,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
-        "daysRemaining": 56,
+        "daysRemaining": 55,
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
@@ -161,7 +154,7 @@
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-15T17:03:06.378Z",
+      "checkedAt": "2026-10-15T21:24:57.882Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -173,7 +166,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 900,
+        "responseMs": 1026,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -198,7 +191,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-18T19:33:53.000Z",
-        "daysRemaining": 64,
+        "daysRemaining": 63,
         "issuer": "Google Trust Services",
         "subject": "*.dating-netwo-1613.chatgpt.site"
       },
@@ -230,7 +223,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-15T17:03:07.298Z",
+      "checkedAt": "2026-10-15T21:24:58.927Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -242,7 +235,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 741,
+        "responseMs": 829,
         "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev",
         "contentType": "text/html"
       },
@@ -267,7 +260,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-10T17:14:48.000Z",
-        "daysRemaining": 56,
+        "daysRemaining": 55,
         "issuer": "Let's Encrypt",
         "subject": "riccardoganiere.workers.dev"
       },
@@ -286,7 +279,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-10-15T17:03:08.067Z",
+      "checkedAt": "2026-10-15T21:24:59.785Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -294,7 +287,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 87,
+        "responseMs": 75,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -343,13 +336,6 @@
     }
   ],
   "history": [
-    {
-      "at": "2026-09-29T18:34:52.578Z",
-      "totalSites": 5,
-      "online": 5,
-      "avgScore": 93,
-      "critical": 0
-    },
     {
       "at": "2026-09-30T00:38:41.398Z",
       "totalSites": 5,
@@ -761,6 +747,13 @@
       "totalSites": 5,
       "online": 5,
       "avgScore": 93,
+      "critical": 0
+    },
+    {
+      "at": "2026-10-15T21:24:59.935Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 94,
       "critical": 0
     }
   ]
