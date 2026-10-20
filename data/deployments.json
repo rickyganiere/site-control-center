@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-19T22:31:30.579Z",
+  "generatedAt": "2026-10-20T05:04:12.002Z",
   "summary": {
     "tracked": 4,
     "visible": 2,
     "successful": 1,
     "failing": 0,
     "running": 1,
-    "stale": 1
+    "stale": 0
   },
   "sites": [
     {
@@ -34,7 +34,7 @@
       "kind": "CI",
       "available": true,
       "private": false,
-      "stale": true,
+      "stale": false,
       "latest": {
         "id": 37211466904,
         "name": "Validate Radar",
@@ -47,8 +47,7 @@
         "createdAt": "2026-10-04T15:01:50Z",
         "updatedAt": "2026-10-04T15:02:02Z",
         "url": "https://github.com/rickyganiere/dcb-expansion-radar/actions/runs/37211466904"
-      },
-      "error": "GitHub API HTTP 403 rate-limit-exhausted"
+      }
     },
     {
       "id": "site-control-center",
@@ -59,27 +58,21 @@
       "private": false,
       "stale": false,
       "latest": {
-        "id": 39335545579,
+        "id": 39372892723,
         "name": "GitHub status scan",
         "status": "in_progress",
         "conclusion": null,
         "event": "schedule",
         "branch": "main",
-        "sha": "f43104d31c230177f8ff1faccfbfebe46dff7b43",
+        "sha": "acc50956f95b4ca3d75efba132e7904524eeb11c",
         "title": "GitHub status scan",
-        "createdAt": "2026-10-19T22:31:23Z",
-        "updatedAt": "2026-10-19T22:31:26Z",
-        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/39335545579"
+        "createdAt": "2026-10-20T05:04:03Z",
+        "updatedAt": "2026-10-20T05:04:06Z",
+        "url": "https://github.com/rickyganiere/site-control-center/actions/runs/39372892723"
       }
     }
   ],
   "history": [
-    {
-      "at": "2026-10-11T12:46:24.330Z",
-      "successful": 1,
-      "failing": 0,
-      "running": 1
-    },
     {
       "at": "2026-10-11T18:43:56.743Z",
       "successful": 1,
@@ -250,6 +243,12 @@
     },
     {
       "at": "2026-10-19T22:31:30.579Z",
+      "successful": 1,
+      "failing": 0,
+      "running": 1
+    },
+    {
+      "at": "2026-10-20T05:04:12.002Z",
       "successful": 1,
       "failing": 0,
       "running": 1
