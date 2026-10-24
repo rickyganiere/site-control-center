@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T21:25:55.309Z",
+  "generatedAt": "2026-10-24T04:39:19.724Z",
   "summary": {
     "totalSites": 5,
     "online": 5,
@@ -14,7 +14,7 @@
       "name": "AdVault AI",
       "url": "https://advault-ai.com",
       "monitorMode": "website",
-      "checkedAt": "2026-10-23T21:25:49.604Z",
+      "checkedAt": "2026-10-24T04:39:15.545Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -22,7 +22,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 471,
+        "responseMs": 306,
         "finalUrl": "https://advault-ai.com/",
         "contentType": "text/html"
       },
@@ -47,7 +47,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-21T04:08:41.000Z",
-        "daysRemaining": 58,
+        "daysRemaining": 57,
         "issuer": "Google Trust Services",
         "subject": "advault-ai.com"
       },
@@ -74,7 +74,7 @@
       "name": "Merchant Scanner",
       "url": "https://merchant-radar-dashboard.riccardoganiere.workers.dev",
       "monitorMode": "app",
-      "checkedAt": "2026-10-23T21:25:52.095Z",
+      "checkedAt": "2026-10-24T04:39:17.473Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -82,7 +82,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 377,
+        "responseMs": 401,
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "contentType": "text/html; charset=utf-8"
       },
@@ -154,7 +154,7 @@
       "name": "Affiliate Discovery",
       "url": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-23T21:25:52.503Z",
+      "checkedAt": "2026-10-24T04:39:17.914Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -166,7 +166,7 @@
       "http": {
         "ok": true,
         "status": 401,
-        "responseMs": 1539,
+        "responseMs": 710,
         "finalUrl": "https://affiliate-discovery.dating-netwo-1613.chatgpt.site/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -223,7 +223,7 @@
       "name": "DCB Expansion Radar",
       "url": "https://dcb-expansion-radar.riccardoganiere.workers.dev",
       "monitorMode": "protected",
-      "checkedAt": "2026-10-23T21:25:54.068Z",
+      "checkedAt": "2026-10-24T04:39:18.661Z",
       "availability": {
         "ok": true,
         "expectedStatuses": [
@@ -235,7 +235,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 790,
+        "responseMs": 641,
         "finalUrl": "https://fragrant-firefly-d652.cloudflareaccess.com/cdn-cgi/access/login/dcb-expansion-radar.riccardoganiere.workers.dev",
         "contentType": "text/html"
       },
@@ -279,7 +279,7 @@
       "name": "Site Control Center",
       "url": "https://rickyganiere.github.io/site-control-center/",
       "monitorMode": "website",
-      "checkedAt": "2026-10-23T21:25:54.888Z",
+      "checkedAt": "2026-10-24T04:39:19.339Z",
       "availability": {
         "ok": true,
         "expectedStatuses": null
@@ -287,7 +287,7 @@
       "http": {
         "ok": true,
         "status": 200,
-        "responseMs": 152,
+        "responseMs": 168,
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "contentType": "text/html; charset=utf-8"
       },
@@ -312,7 +312,7 @@
       "ssl": {
         "ok": true,
         "expiresAt": "2026-12-29T23:44:45.000Z",
-        "daysRemaining": 67,
+        "daysRemaining": 66,
         "issuer": "Let's Encrypt",
         "subject": "*.github.io"
       },
@@ -336,13 +336,6 @@
     }
   ],
   "history": [
-    {
-      "at": "2026-10-08T00:42:02.211Z",
-      "totalSites": 5,
-      "online": 5,
-      "avgScore": 93,
-      "critical": 0
-    },
     {
       "at": "2026-10-08T06:39:31.460Z",
       "totalSites": 5,
@@ -751,6 +744,13 @@
     },
     {
       "at": "2026-10-23T21:25:55.309Z",
+      "totalSites": 5,
+      "online": 5,
+      "avgScore": 94,
+      "critical": 0
+    },
+    {
+      "at": "2026-10-24T04:39:19.724Z",
       "totalSites": 5,
       "online": 5,
       "avgScore": 94,
