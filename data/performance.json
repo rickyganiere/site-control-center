@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-25T09:27:00.347Z",
+  "generatedAt": "2026-10-26T10:33:57.524Z",
   "summary": {
     "monitoredSites": 3,
-    "mobileAvg": 97,
+    "mobileAvg": 98,
     "desktopAvg": 99,
     "errors": 0,
     "lighthouseRuns": 6,
@@ -16,21 +16,21 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-25T09:26:04.910Z",
+        "fetchedAt": "2026-10-26T10:32:58.281Z",
         "finalUrl": "https://advault-ai.com/",
         "scores": {
-          "performance": 92,
+          "performance": 93,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
         },
         "lab": {
-          "fcpMs": 1902,
-          "lcpMs": 3179,
-          "tbtMs": 25,
+          "fcpMs": 1813,
+          "lcpMs": 3004,
+          "tbtMs": 56,
           "cls": 0,
-          "speedIndexMs": 1902,
-          "interactiveMs": 3214
+          "speedIndexMs": 2898,
+          "interactiveMs": 3036
         },
         "field": {
           "available": false
@@ -42,7 +42,7 @@
             "displayValue": "Est savings of 12 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 12184
+            "savingsBytes": 12190
           }
         ],
         "psiSkipped": true
@@ -50,7 +50,7 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-25T09:26:16.324Z",
+        "fetchedAt": "2026-10-26T10:33:10.531Z",
         "finalUrl": "https://advault-ai.com/",
         "scores": {
           "performance": 100,
@@ -59,12 +59,12 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 442,
-          "lcpMs": 707,
+          "fcpMs": 449,
+          "lcpMs": 711,
           "tbtMs": 0,
           "cls": 0,
-          "speedIndexMs": 442,
-          "interactiveMs": 711
+          "speedIndexMs": 449,
+          "interactiveMs": 713
         },
         "field": {
           "available": false
@@ -76,7 +76,7 @@
             "displayValue": "Est savings of 12 KiB",
             "score": 50,
             "savingsMs": 0,
-            "savingsBytes": 12703
+            "savingsBytes": 12697
           }
         ],
         "psiSkipped": true
@@ -89,7 +89,7 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-25T09:26:27.401Z",
+        "fetchedAt": "2026-10-26T10:33:22.311Z",
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "scores": {
           "performance": 100,
@@ -98,12 +98,12 @@
           "seo": 45
         },
         "lab": {
-          "fcpMs": 1013,
-          "lcpMs": 1013,
+          "fcpMs": 1043,
+          "lcpMs": 1043,
           "tbtMs": 0,
           "cls": 0,
-          "speedIndexMs": 1013,
-          "interactiveMs": 1013
+          "speedIndexMs": 1043,
+          "interactiveMs": 1043
         },
         "field": {
           "available": false
@@ -114,7 +114,7 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-25T09:26:38.292Z",
+        "fetchedAt": "2026-10-26T10:33:34.062Z",
         "finalUrl": "https://merchant-radar-dashboard.riccardoganiere.workers.dev/login",
         "scores": {
           "performance": 100,
@@ -123,12 +123,12 @@
           "seo": 45
         },
         "lab": {
-          "fcpMs": 307,
-          "lcpMs": 307,
+          "fcpMs": 295,
+          "lcpMs": 295,
           "tbtMs": 0,
           "cls": 0,
-          "speedIndexMs": 307,
-          "interactiveMs": 307
+          "speedIndexMs": 295,
+          "interactiveMs": 295
         },
         "field": {
           "available": false
@@ -144,7 +144,7 @@
       "mobile": {
         "strategy": "mobile",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-25T09:26:49.427Z",
+        "fetchedAt": "2026-10-26T10:33:45.917Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 100,
@@ -153,12 +153,12 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 854,
-          "lcpMs": 975,
+          "fcpMs": 868,
+          "lcpMs": 981,
           "tbtMs": 0,
           "cls": 0.032,
-          "speedIndexMs": 854,
-          "interactiveMs": 975
+          "speedIndexMs": 868,
+          "interactiveMs": 981
         },
         "field": {
           "available": false
@@ -169,7 +169,7 @@
       "desktop": {
         "strategy": "desktop",
         "source": "lighthouse-cli",
-        "fetchedAt": "2026-10-25T09:27:00.346Z",
+        "fetchedAt": "2026-10-26T10:33:57.524Z",
         "finalUrl": "https://rickyganiere.github.io/site-control-center/",
         "scores": {
           "performance": 97,
@@ -178,12 +178,12 @@
           "seo": 100
         },
         "lab": {
-          "fcpMs": 211,
-          "lcpMs": 244,
+          "fcpMs": 216,
+          "lcpMs": 246,
           "tbtMs": 0,
           "cls": 0.107,
-          "speedIndexMs": 211,
-          "interactiveMs": 244
+          "speedIndexMs": 216,
+          "interactiveMs": 246
         },
         "field": {
           "available": false
@@ -194,11 +194,6 @@
     }
   ],
   "history": [
-    {
-      "at": "2026-09-26T04:55:52.345Z",
-      "mobileAvg": 95,
-      "desktopAvg": 99
-    },
     {
       "at": "2026-09-27T04:56:48.273Z",
       "mobileAvg": 97,
@@ -342,6 +337,11 @@
     {
       "at": "2026-10-25T09:27:00.347Z",
       "mobileAvg": 97,
+      "desktopAvg": 99
+    },
+    {
+      "at": "2026-10-26T10:33:57.524Z",
+      "mobileAvg": 98,
       "desktopAvg": 99
     }
   ]
